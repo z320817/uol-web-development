@@ -32,6 +32,7 @@
     <!-- End page styles -->
 
     <!-- Start favicons for range of devices -->
+    <!-- Start generated section of code -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicons/apple-icon-72x72.png">
@@ -49,6 +50,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/icons/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- End generated section of code -->
     <!-- End favicons for range of devices -->
 </head>
 
@@ -58,8 +60,16 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#"><img alt="Avalanche cyber news logotype"
-                        src="assets/images/desktop/header/avalanche-logo.svg"></a>
+                <a href="#">
+                    <picture>
+                        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 576px)">
+                        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 768px)">
+                        <source srcset="assets/images/desktop/header/avalanche-logo.svg" media="(min-width: 992px)">
+                        <source srcset="assets/images/desktop/header/avalanche-logo.svg" type="image/svg">
+                        <source srcset="assets/images/desktop/header/avalanche-logo.png" type="image/png">
+                        <img alt="Avalanche cyber news logotype" src="assets/images/desktop/header/avalanche-logo.svg">
+                    </picture>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#">Research</a></li>
