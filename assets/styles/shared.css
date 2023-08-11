@@ -1,0 +1,4 @@
+/* Responsive images default behavior */
+.responsive-img img {
+    width: auto;
+}
