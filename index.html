@@ -61,13 +61,10 @@
         <nav>
             <div class="logo">
                 <a href="#">
-                    <picture>
-                        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 576px)">
-                        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 768px)">
-                        <source srcset="assets/images/desktop/header/avalanche-logo.svg" media="(min-width: 992px)">
-                        <source srcset="assets/images/desktop/header/avalanche-logo.svg" type="image/svg">
-                        <source srcset="assets/images/desktop/header/avalanche-logo.png" type="image/png">
-                        <img alt="Avalanche cyber news logotype" src="assets/images/desktop/header/avalanche-logo.svg">
+                    <picture class="responsive-img" data-image-src="avalanche-logo" data-image-types="svg,png"
+                        data-image-alt="Avalanche cyber news logotype" data-image-section="header">
+                        <img alt="Avalanche cyber news logotype" src="assets/images/desktop/header/avalanche-logo.png"
+                            style="width:auto;"></img>
                     </picture>
                 </a>
             </div>
@@ -174,6 +171,7 @@
 
     <!-- Start page scripts -->
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/shared.js"></script>
     <!-- End page scripts -->
 </body>
 
