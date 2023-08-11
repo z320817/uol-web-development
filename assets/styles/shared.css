@@ -1,4 +1,17 @@
+/* Global font styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: Inter, sans-serif;
+}
+
 /* Responsive images default behavior */
 .responsive-img img {
-    width: auto;
+  width: auto;
 }

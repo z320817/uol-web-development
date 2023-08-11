@@ -1,0 +1,26 @@
+/* Header styles starts here */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Header navigation styles */
+.main-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-nav a {
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+}
+/* Header styles ends here */
