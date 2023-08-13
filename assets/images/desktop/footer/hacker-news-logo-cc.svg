@@ -1,9 +1,77 @@
-<svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="107" height="107" fill="url(#pattern0)"/>
-<defs>
-<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_30_146" transform="scale(0.0104167)"/>
-</pattern>
-<image id="image0_30_146" width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAACa0lEQVR4nO2YQYoUQRBFH6jjAUR09BJuRETmIIIoiOhldKOL0Z3XcCMyMMwtBFH0BKL0JqRhFkONSoaZZVZ1vgex684s4mfEzwwQERERERE5TxjU5KAaBUABYsUHwQpAAbqfwrAC+icibEH9kxEdQg9gxwUYnVCAvihAZxSgM4sTYDRTDQVAAawAbEFhC9IDQhNGE+59SwlvQf2TFF5D/5yEp4Xvj/sNk/iocM9nI7wDNsBB4d4vGiT/eeFed4GfIwiwjW/AzYK9LwDvKpL/HrhYsM914EvhmrX5WYQA2zgBLhfsfwX4+A/J/wRcLVj/EnCUWLc2P4sRIIC3hd9wC/ieWPcHcLtw7TfJb67Nz6IEiIQpP0is+bih6e68AJuEKb8qWO9lY9PdeQEiYcrbfv3hL+scA3uNTXcIASJhyteAz7/5/1fgxgymO4wAkTDlO5P2sW1j92Yy3aEEiIQpPzzznyczmu5wAmwSpvwaOJzZdIcTIE77+X7Bt+0Vmu7+6Zotvq02P6sQIBKmPLfpDitAJEx5TtMdWoBImPJcpju8AJuEKc9husMLEImXcouXrgJQZ8qtTdcKIGfKrU1XAcjdKv73/tnfp2n9Qa0TMEUBFAArAFuQLQg9AE1YE67HWxBeQ8NrqO+A8CGGDzFfwudxFDHBUYSjCBxF4CjCUQSOInAU4SiiHkcROIoIRxHLGUVE52D0FhQKoABnsQKwBaVOxNpjihWAAqROxNpjihWAAgxNJCtmeRusHAXojAKMLoCBAsSCD4IVgAJ0P4VhBfRPRNiC+icjOoQegAJ0P4Wx5goQERERERF2il8nsCVxo6wVbQAAAABJRU5ErkJggg=="/>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70mm"
+   height="70mm"
+   viewBox="0 0 70 70"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="hacker-news-logo-ccc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0141844"
+     inkscape:cx="249.46155"
+     inkscape:cy="294.32518"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern0"
+       id="pattern1"
+       patternTransform="translate(-0.18847535,1.9122719)" />
+    <pattern
+       id="pattern0"
+       patternContentUnits="objectBoundingBox"
+       width="1"
+       height="1">
+      <image
+         id="use1"
+         width="1.0000032"
+         height="1.0000032"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAACa0lEQVR4nO2YQYoUQRBFH6jjAUR09BJuRETmIIIoiOhldKOL0Z3XcCMyMMwtBFH0BKL0JqRhFkONSoaZZVZ1vgex684s4mfEzwwQERERERE5TxjU5KAaBUABYsUHwQpAAbqfwrAC+icibEH9kxEdQg9gxwUYnVCAvihAZxSgM4sTYDRTDQVAAawAbEFhC9IDQhNGE+59SwlvQf2TFF5D/5yEp4Xvj/sNk/iocM9nI7wDNsBB4d4vGiT/eeFed4GfIwiwjW/AzYK9LwDvKpL/HrhYsM914EvhmrX5WYQA2zgBLhfsfwX4+A/J/wRcLVj/EnCUWLc2P4sRIIC3hd9wC/ieWPcHcLtw7TfJb67Nz6IEiIQpP0is+bih6e68AJuEKb8qWO9lY9PdeQEiYcrbfv3hL+scA3uNTXcIASJhyteAz7/5/1fgxgymO4wAkTDlO5P2sW1j92Yy3aEEiIQpPzzznyczmu5wAmwSpvwaOJzZdIcTIE77+X7Bt+0Vmu7+6Zotvq02P6sQIBKmPLfpDitAJEx5TtMdWoBImPJcpju8AJuEKc9husMLEImXcouXrgJQZ8qtTdcKIGfKrU1XAcjdKv73/tnfp2n9Qa0TMEUBFAArAFuQLQg9AE1YE67HWxBeQ8NrqO+A8CGGDzFfwudxFDHBUYSjCBxF4CjCUQSOInAU4SiiHkcROIoIRxHLGUVE52D0FhQKoABnsQKwBaVOxNpjihWAAqROxNpjihWAAgxNJCtmeRusHAXojAKMLoCBAsSCD4IVgAJ0P4VhBfRPRNiC+icjOoQegAJ0P4Wx5goQERERERF2il8nsCVxo6wVbQAAAABJRU5ErkJggg=="
+         x="0"
+         y="0" />
+    </pattern>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1"
+       transform="matrix(0.79232801,0,0,0.79232801,-7.2318166,-9.2325924)">
+      <rect
+         width="107"
+         height="107"
+         fill="url(#pattern0)"
+         id="rect1"
+         style="fill:url(#pattern1)"
+         x="-0.18847536"
+         y="1.912272" />
+    </g>
+    <g
+       id="g2"
+       transform="translate(0.18847536,-1.912272)" />
+  </g>
 </svg>

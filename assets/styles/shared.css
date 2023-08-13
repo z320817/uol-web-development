@@ -22,9 +22,112 @@ h3 {
   width: auto;
 }
 
+/* Header styles starts here */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+}
+
+.main-nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  column-gap: 3em;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.main-nav .nav-links li {
+  white-space: nowrap;
+}
+
+.main-nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.main-nav .search {
+  padding: 6pt 12pt;
+  height: 2em;
+  margin: auto 0pt;
+}
+
+.main-nav .search p {
+  padding-left: 12pt;
+  font-size: 14.4pt;
+}
+
+.main-nav .search p {
+  color: black;
+}
+
+.main-nav .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav .mobile-menu {
+  min-width: 36pt;
+}
+/* Header styles ends here */
+
+/* Footer styles starts here */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.footer-section {
+  max-width: 33%;
+  margin: auto;
+}
+
+.footer-partners .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-partners .nav-links li {
+  margin: 12pt auto;
+}
+
+.footer-partners .nav-links li:first-child {
+  margin: 0 auto 0 0;
+}
+
+.footer-partners .nav-links li:last-child {
+  margin: 0 0 0 auto;
+}
+/* Footer styles ends here */
+
 /* Media queries for responsive design and mobile layout starts here */
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
+  /* Shared styles starts here */
   body {
     font-size: 12pt;
   }
@@ -39,10 +142,42 @@ h3 {
   p {
     font-size: 14pt;
   }
+  /* Shared styles ends here */
+
+  /* Header styles starts here */
+  .main-nav .logo a p {
+    font-size: 11.4pt;
+  }
+
+  .main-nav .search {
+    display: none;
+  }
+
+  .main-nav .login {
+    display: none;
+  }
+
+  .main-nav .nav-links {
+    display: none;
+  }
+
+  .main-nav .mobile-menu {
+    margin-left: auto;
+  }
+
+  .main-nav .login img {
+    padding-left: 8pt;
+  }
+
+  .main-nav .login p {
+    font-size: 14.4pt;
+  }
+  /* Header styles ends here */
 }
 
 /* Tablet Styles (up to 991.98px) */
 @media (max-width: 991.98px) {
+  /* Shared styles starts here */
   body {
     font-size: 14pt;
   }
@@ -54,10 +189,38 @@ h3 {
   h6 {
     font-size: 24pt;
   }
+  /* Shared styles ends here */
+
+  /* Header styles starts here */
+  .main-nav .logo a p {
+    font-size: 11.4pt;
+  }
+
+  .main-nav .login {
+    display: none;
+  }
+
+  .main-nav .nav-links {
+    display: none;
+  }
+
+  .main-nav .mobile-menu {
+    display: flex;
+  }
+
+  .main-nav .login img {
+    padding-left: 8pt;
+  }
+
+  .main-nav .search {
+    margin-left: auto;
+  }
+  /* Header styles ends here */
 }
 
 /* Desktop Styles (min-width: 992px) */
 @media (min-width: 992px) {
+  /* Shared styles starts here */
   body {
     font-size: 14pt;
   }
@@ -72,5 +235,25 @@ h3 {
   p {
     font-size: 14pt;
   }
+  /* Shared styles ends here */
+
+  /* Header styles starts here */
+  .main-nav .logo a p {
+    font-size: 14.4pt;
+    font-weight: 500;
+  }
+
+  .main-nav .nav-links li {
+    padding: 10px 20px;
+  }
+
+  .main-nav .mobile-menu {
+    display: none;
+  }
+
+  .main-nav .login img {
+    padding-left: 8pt;
+  }
+  /* Header styles ends here */
 }
 /* Media queries for responsive design and mobile layout ends here */
