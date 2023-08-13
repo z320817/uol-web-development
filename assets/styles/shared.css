@@ -26,7 +26,7 @@ h3 {
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
   body {
-    font-size: 12px;
+    font-size: 12pt;
   }
   h1,
   h2,
@@ -34,17 +34,17 @@ h3 {
   h4,
   h5,
   h6 {
-    font-size: 20px;
+    font-size: 24pt;
   }
   p {
-    font-size: 14px;
+    font-size: 14pt;
   }
 }
 
 /* Tablet Styles (up to 991.98px) */
 @media (max-width: 991.98px) {
   body {
-    font-size: 14px;
+    font-size: 14pt;
   }
   h1,
   h2,
@@ -52,14 +52,14 @@ h3 {
   h4,
   h5,
   h6 {
-    font-size: 24px;
+    font-size: 24pt;
   }
 }
 
 /* Desktop Styles (min-width: 992px) */
 @media (min-width: 992px) {
   body {
-    font-size: 18px;
+    font-size: 14pt;
   }
   h1,
   h2,
@@ -67,10 +67,10 @@ h3 {
   h4,
   h5,
   h6 {
-    font-size: 28px;
+    font-size: 24pt;
   }
   p {
-    font-size: 16px;
+    font-size: 14pt;
   }
 }
 /* Media queries for responsive design and mobile layout ends here */
