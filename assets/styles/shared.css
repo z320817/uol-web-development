@@ -1,3 +1,6 @@
+/* Import global constants */
+@import url("constants.css");
+
 /* Global font styles */
 body,
 h1,
@@ -13,7 +16,10 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   text-transform: lowercase;
 }
 
@@ -27,9 +33,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: var(--black-color);
   padding: 10px 20px;
-  color: white;
+  color: var(--white-color);
 }
 
 .main-nav {
@@ -48,7 +54,7 @@ header {
 }
 
 .main-nav .nav-links li {
-  white-space: nowrap;
+ white-space: nowrap;
 }
 
 .main-nav .logo {
@@ -60,7 +66,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: var(--white-color);
 }
 
 .main-nav .search {
@@ -75,7 +81,7 @@ header {
 }
 
 .main-nav .search p {
-  color: black;
+  color: var(--black-color);
 }
 
 .main-nav .login {
@@ -92,14 +98,48 @@ header {
 /* Footer styles starts here */
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
+  background-color: var(--grey-color);
 }
 
 .footer-section {
-  max-width: 33%;
-  margin: auto;
+  max-width: 28%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+}
+
+.footer-section .footer-logo {
+  top: -38pt;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.footer-section .footer-logo p{
+  color: var(--white-color);
+  font-size: 2.1em;
+}
+
+.footer-section .footer-policies .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white-color);
+  margin: 12pt auto;
+  font-size: 1.1em;
+  white-space: nowrap;
+}
+
+.footer-section .footer-policies .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .footer-text {
+  margin: 1em 0;
 }
 
 .footer-partners .nav-links {
@@ -129,7 +169,7 @@ footer {
 @media (max-width: 575.98px) {
   /* Shared styles starts here */
   body {
-    font-size: 12pt;
+    font-size: 1em;
   }
   h1,
   h2,
@@ -137,10 +177,10 @@ footer {
   h4,
   h5,
   h6 {
-    font-size: 24pt;
+    font-size: 1.2em;
   }
   p {
-    font-size: 14pt;
+    font-size: 0.8em;
   }
   /* Shared styles ends here */
 
@@ -170,7 +210,7 @@ footer {
   }
 
   .main-nav .login p {
-    font-size: 14.4pt;
+    font-size: 0.8em;
   }
   /* Header styles ends here */
 }
@@ -179,7 +219,7 @@ footer {
 @media (max-width: 991.98px) {
   /* Shared styles starts here */
   body {
-    font-size: 14pt;
+    font-size: 1.2em;
   }
   h1,
   h2,
@@ -187,13 +227,13 @@ footer {
   h4,
   h5,
   h6 {
-    font-size: 24pt;
+    font-size: 1.4em;
   }
   /* Shared styles ends here */
 
   /* Header styles starts here */
   .main-nav .logo a p {
-    font-size: 11.4pt;
+    font-size: 0.8em;
   }
 
   .main-nav .login {
@@ -222,7 +262,7 @@ footer {
 @media (min-width: 992px) {
   /* Shared styles starts here */
   body {
-    font-size: 14pt;
+    font-size: 1.4em;
   }
   h1,
   h2,
@@ -230,16 +270,16 @@ footer {
   h4,
   h5,
   h6 {
-    font-size: 24pt;
+    font-size: 1.5em;
   }
   p {
-    font-size: 14pt;
+    font-size:  0.875em;
   }
   /* Shared styles ends here */
 
   /* Header styles starts here */
   .main-nav .logo a p {
-    font-size: 14.4pt;
+    font-size: 0.875em;
     font-weight: 500;
   }
 
