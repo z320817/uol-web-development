@@ -9,7 +9,7 @@ WHY?
 To reduce code duplication from HTML. To show that I am able to manipulate DOM.
 Hope you will like it)
 */
-function handleImageResize() {
+function handleResize() {
   // Store Media Query constants
   const mobileQuery = "(max-width: 575.98px)";
   const tabletQuery = "(min-width: 576px) and (max-width: 991.98px)";
@@ -36,6 +36,7 @@ function handleImageResize() {
     for (const image of images) {
       if (mediaQueryMobile.matches) {
         assignSourceAccordingDeviceWidth(image, mobileQuery, mobilePath);
+        createMobileFooter();
       } else if (mediaQueryTablet.matches) {
         assignSourceAccordingDeviceWidth(image, tabletQuery, tabletPath);
       } else if (mediaQueryDesktop.matches) {
@@ -55,7 +56,7 @@ function handleImageResize() {
         <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 576px) and (max-width: 991.98px)" type="image/svg">          
         <img alt="Avalanche cyber news logotype" src="assets/images/mobile/header/avalanche-logo.svg">
     </picture>
-    */
+  */
   function assignSourceAccordingDeviceWidth(image, deviceType, sourcePath) {
     // First, remove previous source tags
     clearUnusedSources(image);
@@ -103,22 +104,52 @@ function handleImageResize() {
       }
     }
   }
+
+  //This code reorders footer node for mobile view
+  function createMobileFooter() {
+    // Get elements to manipulate
+    const newsletterFormElement = document.querySelector('.footer-newsletter');
+    const footerPartnersElement = document.querySelector('.footer-partners');
+    const newsletterTextElement = document.getElementById("newsletter");
+    const logoSection = document.getElementById("logo-section");
+
+    // Create insertion reference for newsletter text
+    const newsletterTextReferenceNode = logoSection.childNodes[2];
+
+    // Create insertion reference for newsletter form
+    const newsletterFormReferenceNode = logoSection.childNodes[3];
+
+    // Create insertion reference for partners logo
+    const footerPartnersReferenceNode = logoSection.childNodes[4];
+
+    // Insert newsletter text element
+    logoSection.insertBefore(newsletterTextElement, newsletterTextReferenceNode);
+
+    // Insert newsletter form element
+    logoSection.insertBefore(newsletterFormElement, newsletterFormReferenceNode);
+
+    // Insert partners logo element
+    logoSection.insertBefore(footerPartnersElement, footerPartnersReferenceNode);
+  }
 }
 
 // Fires image source option generation on resize event
 addEventListener("resize", () => {
-  handleImageResize();
+  handleResize();
 });
 
 // Fires image source option generation after page loaded to match initial device width
 addEventListener("DOMContentLoaded", () => {
-  handleImageResize();
+  handleResize();
 });
-/*Utility to generate images adopted for screen size ends here*/
+/* 
+Utility to generate images adopted for screen size ends here
+*/
 
-/*Static cursor for headers handler starts here
-This code creates style for headers accross entire website*/
-
+/* 
+Static cursor for headers handler starts here
+This code creates style for headers accross entire website
+*/
 // Get elements with class name 'box'
 const spanElements = document.getElementsByClassName("static-cursor");
 
@@ -128,4 +159,6 @@ for (const spanElement of spanElements) {
   // Append the text node to the <span> element
   spanElement.appendChild(textNode);
 }
-/*Static cursor for headers handler ends here*/
+/* 
+Static cursor for headers handler ends here
+*/

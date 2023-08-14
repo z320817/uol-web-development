@@ -277,6 +277,23 @@ footer {
     font-size: 0.8em;
   }
   /* Header styles ends here */
+
+  /* Footer styles starts here */
+  footer {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+  }
+
+  footer .footer-section {
+    min-width: 90%;
+  }
+
+  .footer-section .footer-newsletter {
+    width: 100%;
+  }
+  /* Footer styles ends here */
 }
 
 /* Tablet Styles (up to 991.98px) */
@@ -336,6 +353,10 @@ footer {
 
   .footer-section .footer-nav .nav-links {
     justify-content: space-between;
+  }
+
+  .footer-section .footer-newsletter {
+    width: 100%;
   }
   /* Footer styles ends here */
 }
