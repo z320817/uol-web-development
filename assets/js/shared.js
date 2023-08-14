@@ -10,10 +10,6 @@ It takes image class and custom atribute data tag and
 produces generic implementation of <picture> element 
 with alternative source for relaibility and adopted media size
 to serve correct image for correct type of device
-
-WHY?
-To reduce code duplication from HTML. To show that I am able to manipulate DOM.
-Hope you will like it)
 */
 function handleResize() {
   if (!isMobileFooterCreated) {
@@ -176,10 +172,17 @@ function handleResize() {
   function restoreFooterState(fragment) {
     // Find the existing <footer> element
     const footerSection = document.getElementById("footer");
+    let documentBody;
 
-    if (fragment && footerSection) {
-      footerSection.innerHTML = ""; // Clear existing content
-      footerSection.appendChild(fragment.cloneNode(true)); // Restore the copied element
+    // Check if footer is found for safety
+    if (footerSection) {
+      documentBody = footerSection.parentNode;
+
+      documentBody.removeChild(footerSection);
+    }
+
+    if (documentBody && footerSection) {
+      documentBody.appendChild(fragment.cloneNode(true)); // Restore the copied element
     }
 
     // Update mobile footer flag to initial state

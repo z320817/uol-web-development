@@ -34,7 +34,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black-color);
-  padding: 10px 20px;
+  padding: 0.4em 2em;
   color: var(--white-color);
 }
 
@@ -100,7 +100,7 @@ header {
 footer {
   display: flex;
   margin-top: 4em;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
   background-color: var(--grey-color);
@@ -110,7 +110,7 @@ footer {
   max-width: 28%;
   display: flex;
   flex-direction: column;
-  margin: 0 1em;
+  margin: 0 2em;
 }
 
 .footer-section .nav-links {
@@ -158,9 +158,9 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin-top: 2em;
+  margin-bottom: 4em;
   background-color: var(--white-color);
   color: var(--grey-color);
-  width: 90%;
   height: 2em;
 }
 
@@ -198,7 +198,6 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   align-content: space-between;
   flex-wrap: wrap;
 }
@@ -384,7 +383,7 @@ footer {
 
   /* Shared styles starts here */
   body {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   h1,
@@ -393,7 +392,7 @@ footer {
   h4,
   h5,
   h6 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   p {
@@ -404,7 +403,7 @@ footer {
 
   /* Header styles starts here */
   .main-nav .logo a p {
-    font-size: 0.875em;
+    font-size: 1em;
     font-weight: 500;
   }
 
