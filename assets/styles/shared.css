@@ -320,6 +320,24 @@ footer {
     margin-left: auto;
   }
   /* Header styles ends here */
+
+  /* Footer styles starts here */
+  footer {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+
+  footer .footer-section {
+    min-width: 54%;
+  }
+
+  .footer-section .footer-nav .nav-links {
+    justify-content: space-between;
+  }
+  /* Footer styles ends here */
 }
 
 /* Desktop Styles (min-width: 992px) */
