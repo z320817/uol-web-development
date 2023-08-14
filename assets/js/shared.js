@@ -1,6 +1,8 @@
-// Store initial footer state
+// Global variables
+/* Start store initial footer state */
 let footer = null;
 let isMobileFooterCreated = false;
+/* Ends store initial footer state */
 
 /* 
 Utility to generate images adopted for screen size starts here
