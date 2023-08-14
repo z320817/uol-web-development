@@ -54,7 +54,7 @@ header {
 }
 
 .main-nav .nav-links li {
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 .main-nav .logo {
@@ -93,6 +93,7 @@ header {
 .main-nav .mobile-menu {
   min-width: 36pt;
 }
+
 /* Header styles ends here */
 
 /* Footer styles starts here */
@@ -124,7 +125,7 @@ footer {
 }
 
 .footer-section .nav-links li {
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 .footer-section .nav-links a:hover {
@@ -138,7 +139,7 @@ footer {
   position: relative;
 }
 
-.footer-section .footer-logo p{
+.footer-section .footer-logo p {
   color: var(--white-color);
   font-size: 2.1em;
 }
@@ -226,15 +227,18 @@ footer {
 .footer-partners .nav-links li:last-child {
   margin: 0 0 0 auto;
 }
+
 /* Footer styles ends here */
 
 /* Media queries for responsive design and mobile layout starts here */
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1em;
   }
+
   h1,
   h2,
   h3,
@@ -243,9 +247,11 @@ footer {
   h6 {
     font-size: 1.2em;
   }
+
   p {
     font-size: 0.8em;
   }
+
   /* Shared styles ends here */
 
   /* Header styles starts here */
@@ -276,6 +282,7 @@ footer {
   .main-nav .login p {
     font-size: 0.8em;
   }
+
   /* Header styles ends here */
 
   /* Footer styles starts here */
@@ -293,15 +300,23 @@ footer {
   .footer-section .footer-newsletter {
     width: 100%;
   }
+
+  #footer-policy-text h5,
+  #footer-policy-text p:nth-child(2) {
+    display: none;
+  }
+
   /* Footer styles ends here */
 }
 
 /* Tablet Styles (up to 991.98px) */
 @media (max-width: 991.98px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1.2em;
   }
+
   h1,
   h2,
   h3,
@@ -310,6 +325,7 @@ footer {
   h6 {
     font-size: 1.4em;
   }
+
   /* Shared styles ends here */
 
   /* Header styles starts here */
@@ -336,6 +352,7 @@ footer {
   .main-nav .search {
     margin-left: auto;
   }
+
   /* Header styles ends here */
 
   /* Footer styles starts here */
@@ -358,15 +375,18 @@ footer {
   .footer-section .footer-newsletter {
     width: 100%;
   }
+
   /* Footer styles ends here */
 }
 
 /* Desktop Styles (min-width: 992px) */
 @media (min-width: 992px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1.4em;
   }
+
   h1,
   h2,
   h3,
@@ -375,9 +395,11 @@ footer {
   h6 {
     font-size: 1.5em;
   }
+
   p {
-    font-size:  0.875em;
+    font-size: 0.875em;
   }
+
   /* Shared styles ends here */
 
   /* Header styles starts here */
@@ -397,6 +419,8 @@ footer {
   .main-nav .login img {
     padding-left: 8pt;
   }
+
   /* Header styles ends here */
 }
+
 /* Media queries for responsive design and mobile layout ends here */

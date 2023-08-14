@@ -107,29 +107,33 @@ function handleResize() {
 
   //This code reorders footer node for mobile view
   function createMobileFooter() {
-    // Get elements to manipulate
-    const newsletterFormElement = document.querySelector('.footer-newsletter');
-    const footerPartnersElement = document.querySelector('.footer-partners');
-    const newsletterTextElement = document.getElementById("newsletter");
-    const logoSection = document.getElementById("logo-section");
+    // Store references to all nodes to be moved
+    const elementsToManipulate = {
+      newsletterForm: document.querySelector(".footer-newsletter"),
+      footerPartners: document.querySelector(".footer-partners"),
+      footerPolicies: document.querySelector(".footer-policies"),
+      newsletterText: document.getElementById("newsletter"),
+      logoSection: document.getElementById("logo-section")
+    };
 
-    // Create insertion reference for newsletter text
-    const newsletterTextReferenceNode = logoSection.childNodes[2];
+    // Store new insertion references where modes will be moved
+    const insertionReferences = {
+      newsletterText: elementsToManipulate.logoSection.childNodes[2],
+      newsletterForm: elementsToManipulate.logoSection.childNodes[3],
+      footerPartners: elementsToManipulate.logoSection.childNodes[3],
+      footerPolicies: elementsToManipulate.logoSection.childNodes[6]
+    };
 
-    // Create insertion reference for newsletter form
-    const newsletterFormReferenceNode = logoSection.childNodes[3];
+    // Node moving function
+    const insertElement = (element, reference) => {
+      elementsToManipulate.logoSection.insertBefore(element, reference);
+    };
 
-    // Create insertion reference for partners logo
-    const footerPartnersReferenceNode = logoSection.childNodes[4];
-
-    // Insert newsletter text element
-    logoSection.insertBefore(newsletterTextElement, newsletterTextReferenceNode);
-
-    // Insert newsletter form element
-    logoSection.insertBefore(newsletterFormElement, newsletterFormReferenceNode);
-
-    // Insert partners logo element
-    logoSection.insertBefore(footerPartnersElement, footerPartnersReferenceNode);
+    // Move nodes to the new positions
+    insertElement(elementsToManipulate.newsletterText, insertionReferences.newsletterText);
+    insertElement(elementsToManipulate.newsletterForm, insertionReferences.newsletterForm);
+    insertElement(elementsToManipulate.footerPartners, insertionReferences.footerPartners);
+    insertElement(elementsToManipulate.footerPolicies, insertionReferences.footerPolicies);
   }
 }
 
