@@ -1,3 +1,7 @@
+// Store initial footer state
+let footer = null;
+let isMobileFooterCreated = false;
+
 /* 
 Utility to generate images adopted for screen size starts here
 It takes image class and custom atribute data tag and
@@ -10,6 +14,10 @@ To reduce code duplication from HTML. To show that I am able to manipulate DOM.
 Hope you will like it)
 */
 function handleResize() {
+  if (!isMobileFooterCreated) {
+    copyFooterSectionInMemory();
+  }
+
   // Store Media Query constants
   const mobileQuery = "(max-width: 575.98px)";
   const tabletQuery = "(min-width: 576px) and (max-width: 991.98px)";
@@ -36,7 +44,6 @@ function handleResize() {
     for (const image of images) {
       if (mediaQueryMobile.matches) {
         assignSourceAccordingDeviceWidth(image, mobileQuery, mobilePath);
-        createMobileFooter();
       } else if (mediaQueryTablet.matches) {
         assignSourceAccordingDeviceWidth(image, tabletQuery, tabletPath);
       } else if (mediaQueryDesktop.matches) {
@@ -45,6 +52,19 @@ function handleResize() {
         // Desktop scenario used as a default fallback case
         assignSourceAccordingDeviceWidth(image, desktopQuery, desktopPath);
       }
+    }
+  }
+
+  // Handle resize of elements besides images
+  if (mediaQueryMobile.matches) {
+    createMobileFooter();
+  } else if (mediaQueryTablet.matches) {
+    if (isMobileFooterCreated) {
+      restoreFooterState(footer);
+    }
+  } else if (mediaQueryDesktop.matches) {
+    if (isMobileFooterCreated) {
+      restoreFooterState(footer);
     }
   }
 
@@ -113,7 +133,7 @@ function handleResize() {
       footerPartners: document.querySelector(".footer-partners"),
       footerPolicies: document.querySelector(".footer-policies"),
       newsletterText: document.getElementById("newsletter"),
-      logoSection: document.getElementById("logo-section")
+      logoSection: document.getElementById("logo-section"),
     };
 
     // Store new insertion references where modes will be moved
@@ -121,7 +141,7 @@ function handleResize() {
       newsletterText: elementsToManipulate.logoSection.childNodes[2],
       newsletterForm: elementsToManipulate.logoSection.childNodes[3],
       footerPartners: elementsToManipulate.logoSection.childNodes[3],
-      footerPolicies: elementsToManipulate.logoSection.childNodes[6]
+      footerPolicies: elementsToManipulate.logoSection.childNodes[6],
     };
 
     // Node moving function
@@ -130,10 +150,47 @@ function handleResize() {
     };
 
     // Move nodes to the new positions
-    insertElement(elementsToManipulate.newsletterText, insertionReferences.newsletterText);
-    insertElement(elementsToManipulate.newsletterForm, insertionReferences.newsletterForm);
-    insertElement(elementsToManipulate.footerPartners, insertionReferences.footerPartners);
-    insertElement(elementsToManipulate.footerPolicies, insertionReferences.footerPolicies);
+    insertElement(
+      elementsToManipulate.newsletterText,
+      insertionReferences.newsletterText
+    );
+    insertElement(
+      elementsToManipulate.newsletterForm,
+      insertionReferences.newsletterForm
+    );
+    insertElement(
+      elementsToManipulate.footerPartners,
+      insertionReferences.footerPartners
+    );
+    insertElement(
+      elementsToManipulate.footerPolicies,
+      insertionReferences.footerPolicies
+    );
+
+    // Check if footer state was modified
+    isMobileFooterCreated = true;
+  }
+
+  function restoreFooterState(fragment) {
+    // Find the existing <footer> element
+    const footerSection = document.getElementById("footer");
+
+    if (fragment && footerSection) {
+      footerSection.innerHTML = ""; // Clear existing content
+      footerSection.appendChild(fragment.cloneNode(true)); // Restore the copied element
+    }
+
+    // Update mobile footer flag to initial state
+    isMobileFooterCreated = false;
+  }
+
+  // Make a copy of footer HTML section to store it's state
+  function copyFooterSectionInMemory() {
+    const footerSection = document.getElementById("footer");
+
+    if (footerSection) {
+      footer = footerSection.cloneNode(true); // Clone with children
+    }
   }
 }
 
