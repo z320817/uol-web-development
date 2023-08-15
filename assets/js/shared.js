@@ -193,7 +193,7 @@ function handleResize() {
   function copyFooterSectionInMemory() {
     const footerSection = document.getElementById("footer");
 
-    if (footerSection) {
+    if (footerSection && !footer) {
       footer = footerSection.cloneNode(true); // Clone with children
     }
   }
@@ -227,4 +227,52 @@ for (const spanElement of spanElements) {
 }
 /* 
 Static cursor for headers handler ends here
+*/
+
+// Get elements with class name 'static-cursor'
+const staticHeadersSpanElements = document.getElementsByClassName("static-cursor");
+
+for (const spanElement of staticHeadersSpanElements) {
+  // Create a text node
+  const textNode = document.createTextNode("| ");
+
+  // Clear element
+  spanElement.innerHTML = "";
+
+  // Append the text node to the <span> element
+  spanElement.appendChild(textNode);
+}
+/* 
+Static cursor for headers handler ends here
+*/
+
+/* 
+Dynamic cursor for headers handler starts here
+This code creates style for main headers accross entire website
+*/
+// Get elements with class name 'blinking-cursor'
+const dynamicHeadersSpanElements = document.getElementsByClassName("blinking-cursor");
+const shownTextNode = document.createTextNode("| ");
+const hiddenTextNode = "&ensp;";
+
+for (const spanElement of dynamicHeadersSpanElements) {
+  spanElement.appendChild(shownTextNode);
+}
+
+// Set interval to blink
+setInterval(() => {
+  for (const spanElement of dynamicHeadersSpanElements) {
+
+    const isCursorShown = spanElement.firstChild === shownTextNode;
+
+    if (isCursorShown) {
+      spanElement.innerHTML = hiddenTextNode;
+    } else {
+      spanElement.innerHTML = "";
+      spanElement.appendChild(shownTextNode);
+    }
+  }
+}, 800);
+/* 
+Dynamic cursor for headers handler ends here
 */

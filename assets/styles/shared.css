@@ -1,7 +1,7 @@
 /* Import global constants */
 @import url("constants.css");
 
-/* Global font styles */
+/* Global font styles starts here*/
 body,
 h1,
 h2,
@@ -14,14 +14,18 @@ a {
   font-family: Inter, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   text-transform: lowercase;
 }
+
+/* Global font styles ends here*/
+
+/* Global content area margin starts here*/
+main {
+  margin: 1.6em 2em;
+}
+
+/* Global content area margin ends here*/
 
 /* Responsive images default behavior */
 .responsive-img img {
@@ -76,7 +80,7 @@ header {
 }
 
 .main-nav .search p {
-  padding-left: 12pt;
+  padding-left: .8em;
   font-size: 14.4pt;
 }
 
@@ -92,6 +96,22 @@ header {
 
 .main-nav .mobile-menu {
   min-width: 36pt;
+}
+
+header .search {
+  font-size: 1.2em;
+}
+
+header .login {
+  font-size: 1em;
+}
+
+header .main-nav {
+  font-size: 1.2em;
+}
+
+header .logo p {
+  font-size: 1em;
 }
 
 /* Header styles ends here */
@@ -227,7 +247,32 @@ footer {
   margin: 0 0 0 auto;
 }
 
+footer h5 {
+  font-size: 1em;
+}
+
+footer p {
+  font-size: 0.875em;
+}
+
+footer a {
+  font-size: 0.875em;
+}
+
 /* Footer styles ends here */
+
+/* Dynamic header blinking cursor style starts here  */
+.page-header {
+  margin-bottom: 0.4em;
+}
+
+.fixed-main-header {
+  position: absolute;
+  left: 1.6em;
+}
+
+/* Dynamic header blinking cursor style ends here  */
+
 
 /* Media queries for responsive design and mobile layout starts here */
 /* Mobile Styles (up to 575.98px) */
@@ -313,16 +358,26 @@ footer {
 
   /* Shared styles starts here */
   body {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
-  h1,
-  h2,
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: .9em;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
   }
 
   /* Shared styles ends here */
@@ -350,6 +405,7 @@ footer {
 
   .main-nav .search {
     margin-left: auto;
+    height: 1.6em;
   }
 
   /* Header styles ends here */
@@ -383,30 +439,31 @@ footer {
 
   /* Shared styles starts here */
   body {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
-  h1,
-  h2,
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: .9em;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   p {
-    font-size: 0.875em;
+    font-size: 1em;
   }
 
   /* Shared styles ends here */
 
   /* Header styles starts here */
-  .main-nav .logo a p {
-    font-size: 1em;
-    font-weight: 500;
-  }
-
   .main-nav .nav-links li {
     padding: 10px 20px;
   }

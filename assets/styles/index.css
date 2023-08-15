@@ -1,0 +1,18 @@
+/* Import global constants */
+@import url("constants.css");
+
+/* Header styles starts here */
+
+/* Header styles ends here */
+
+/* Media queries for responsive design and mobile layout starts here */
+/* Mobile Styles (up to 575.98px) */
+@media (max-width: 575.98px) {}
+
+/* Tablet Styles (up to 991.98px) */
+@media (max-width: 991.98px) {}
+
+/* Desktop Styles (min-width: 992px) */
+@media (min-width: 992px) {}
+
+/* Media queries for responsive design and mobile layout ends here */
