@@ -153,7 +153,7 @@ footer {
 }
 
 .footer-section .footer-logo {
-  top: -36pt;
+  top: -3em;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -268,23 +268,30 @@ footer a {
 
 .fixed-main-header {
   position: absolute;
-  left: 1.6em;
+  left: 2.1em;
 }
 
 /* Dynamic header blinking cursor style ends here  */
 
 
 /* Media queries for responsive design and mobile layout starts here */
-/* Mobile Styles (up to 575.98px) */
-@media (max-width: 575.98px) {
+
+/* Desktop Styles (min-width: 992px) */
+@media (min-width: 992px) {
 
   /* Shared styles starts here */
   body {
     font-size: 1em;
   }
 
-  h1,
-  h2,
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: .9em;
+  }
+
   h3,
   h4,
   h5,
@@ -293,64 +300,25 @@ footer a {
   }
 
   p {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   /* Shared styles ends here */
 
   /* Header styles starts here */
-  .main-nav .logo a p {
-    font-size: 11.4pt;
-  }
-
-  .main-nav .search {
-    display: none;
-  }
-
-  .main-nav .login {
-    display: none;
-  }
-
-  .main-nav .nav-links {
-    display: none;
+  .main-nav .nav-links li {
+    padding: 10px 20px;
   }
 
   .main-nav .mobile-menu {
-    margin-left: auto;
+    display: none;
   }
 
   .main-nav .login img {
     padding-left: 8pt;
   }
 
-  .main-nav .login p {
-    font-size: 0.8em;
-  }
-
   /* Header styles ends here */
-
-  /* Footer styles starts here */
-  footer {
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    justify-content: center;
-  }
-
-  footer .footer-section {
-    min-width: 90%;
-  }
-
-  .footer-section .footer-newsletter {
-    width: 100%;
-  }
-
-  #footer-policy-text h5,
-  #footer-policy-text p:nth-child(2) {
-    display: none;
-  }
-
-  /* Footer styles ends here */
 }
 
 /* Tablet Styles (up to 991.98px) */
@@ -434,22 +402,16 @@ footer a {
   /* Footer styles ends here */
 }
 
-/* Desktop Styles (min-width: 992px) */
-@media (min-width: 992px) {
+/* Mobile Styles (up to 575.98px) */
+@media (max-width: 575.98px) {
 
   /* Shared styles starts here */
   body {
     font-size: 1em;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: .9em;
-  }
-
+  h1,
+  h2,
   h3,
   h4,
   h5,
@@ -458,25 +420,110 @@ footer a {
   }
 
   p {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   /* Shared styles ends here */
 
   /* Header styles starts here */
-  .main-nav .nav-links li {
-    padding: 10px 20px;
+  .main-nav .logo a p {
+    font-size: 11.4pt;
+  }
+
+  .main-nav .search {
+    display: none;
+  }
+
+  .main-nav .login {
+    display: none;
+  }
+
+  .main-nav .nav-links {
+    display: none;
   }
 
   .main-nav .mobile-menu {
-    display: none;
+    margin-left: auto;
   }
 
   .main-nav .login img {
     padding-left: 8pt;
   }
 
+  .main-nav .login p {
+    font-size: 0.8em;
+  }
+
   /* Header styles ends here */
+
+  /* Footer styles starts here */
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: var(--white-color);
+  }
+
+  #logo-section {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .footer-section .footer-logo {
+    position: relative;
+    top: 1em;
+    width: 100%;
+  }
+
+  .footer-logo a p {
+    width: 100%;
+  }
+
+  .footer-logo a img {
+    width: 100%;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    background-color: var(--grey-color);
+  }
+
+  .footer-container>* {
+    margin: 1em 2em;
+  }
+
+  .footer-section .footer-text {
+    margin: 1em 2em;
+  }
+
+  .footer-section .footer-newsletter {
+    margin: 1em 2em;
+    width: auto;
+  }
+
+  .footer-section .footer-partners .nav-links {
+    margin: 0 auto;
+  }
+
+  #footer-policy-text h5,
+  #footer-policy-text p:nth-child(2) {
+    display: none;
+  }
+
+  .footer-logo a p {
+    display: none;
+  }
+
+  /* Footer styles ends here */
 }
 
 /* Media queries for responsive design and mobile layout ends here */

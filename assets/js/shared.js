@@ -55,7 +55,9 @@ function handleResize() {
 
   // Handle resize of elements besides images
   if (mediaQueryMobile.matches) {
-    createMobileFooter();
+    if (!isMobileFooterCreated) {
+      createMobileFooter();
+    }
   } else if (mediaQueryTablet.matches) {
     if (isMobileFooterCreated) {
       restoreFooterState(footer);
@@ -125,26 +127,37 @@ function handleResize() {
 
   //This code reorders footer node for mobile view
   function createMobileFooter() {
+    const footer = document.getElementById("footer");
+
+    // Create container to hold set of updated elements
+    const container = document.createElement("div");
+    container.setAttribute("class", "footer-section footer-container");
+
+    footer.appendChild(container);
+
     // Store references to all nodes to be moved
     const elementsToManipulate = {
       newsletterForm: document.querySelector(".footer-newsletter"),
       footerPartners: document.querySelector(".footer-partners"),
       footerPolicies: document.querySelector(".footer-policies"),
+      footerPoliciesText: document.getElementById("footer-policy-text"),
       newsletterText: document.getElementById("newsletter"),
       logoSection: document.getElementById("logo-section"),
+      footerContainer: document.querySelector(".footer-container"),
     };
 
     // Store new insertion references where modes will be moved
     const insertionReferences = {
-      newsletterText: elementsToManipulate.logoSection.childNodes[2],
-      newsletterForm: elementsToManipulate.logoSection.childNodes[3],
-      footerPartners: elementsToManipulate.logoSection.childNodes[3],
-      footerPolicies: elementsToManipulate.logoSection.childNodes[6],
+      newsletterText: elementsToManipulate.footerContainer.childNodes[2],
+      newsletterForm: elementsToManipulate.footerContainer.childNodes[3],
+      footerPartners: elementsToManipulate.footerContainer.childNodes[3],
+      footerPolicies: elementsToManipulate.footerContainer.childNodes[6],
+      footerPoliciesText: elementsToManipulate.footerContainer.childNodes[6],
     };
 
     // Node moving function
     const insertElement = (element, reference) => {
-      elementsToManipulate.logoSection.insertBefore(element, reference);
+      elementsToManipulate.footerContainer.insertBefore(element, reference);
     };
 
     // Move nodes to the new positions
@@ -164,6 +177,17 @@ function handleResize() {
       elementsToManipulate.footerPolicies,
       insertionReferences.footerPolicies
     );
+    insertElement(
+      elementsToManipulate.footerPoliciesText,
+      insertionReferences.footerPoliciesText
+    );
+
+    // Delete all the rest elements
+    const footerSections = footer.getElementsByClassName("footer-section");
+
+    for (let i = 0; i < footerSections.length; i++) {
+      footer.removeChild(footerSections[1]);
+    }
 
     // Check if footer state was modified
     isMobileFooterCreated = true;
@@ -178,10 +202,12 @@ function handleResize() {
     if (footerSection) {
       documentBody = footerSection.parentNode;
 
+      // Remove mobile footer version
       documentBody.removeChild(footerSection);
     }
 
     if (documentBody && footerSection) {
+      // Restore footer from saved version
       documentBody.appendChild(fragment.cloneNode(true)); // Restore the copied element
     }
 
