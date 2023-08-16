@@ -6,8 +6,53 @@ const horisontalSections = document.querySelectorAll(".page-horisontal-section")
 let isDragging = false;
 let startPos = 0;
 let prevMouseX = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
+let sectionId;
+const activeIndexes = [];
+const directions = { left: false, right: false }
+
+// Set initial active indexes
+horisontalSections.forEach((_, index) => {
+    activeIndexes[index] = 0;
+});
+
+// Event handler for start sliding/dragging
+function indexController(direction) {
+    for (const horisontalSection of horisontalSections) {
+        // Count article elements in index
+        let articleCount = 0;
+        // Find the nav-links element within the section
+        const articleLinks = horisontalSection.querySelectorAll('.page-horisontal-section-tile');
+        // Get the section ID from the data attribute
+        sectionId = horisontalSection.getAttribute('data-section-id');
+
+
+        // Remove 'active' class from all <li> elements
+        articleLinks.forEach((li, index) => {
+            if (li.classList.contains('active')) {
+                activeIndexes[sectionId] = index;
+            };
+            li.classList.remove('active');
+            articleCount++;
+        });
+
+
+        sectionCurrentIndex = activeIndexes[sectionId];
+        const isIndexExist = typeof sectionCurrentIndex === 'number' && !isNaN(sectionCurrentIndex) && sectionCurrentIndex !== undefined;
+
+        if (isIndexExist) {
+            if (direction.left) {
+                activeIndexes[sectionId] = (activeIndexes[sectionId] - 1 + articleCount) % articleCount;
+                setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
+            } else {
+                activeIndexes[sectionId] = (activeIndexes[sectionId] + 1) % articleCount;
+                setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
+            }
+        }
+
+        // Add 'active' class to the <li> element at the target index
+        // articleLinks[targetIndex].classList.add('active');
+    }
+}
 
 // Event handler for start sliding/dragging
 function dragStart(event) {
@@ -17,20 +62,29 @@ function dragStart(event) {
         startPos = event.clientX;
         event.preventDefault();
     }
-    prevMouseX = startPos; // Set initial previous mouse X position
+    // Set initial previous mouse X position
+    prevMouseX = startPos;
     isDragging = true;
 }
 
 // Event handler for process of sliding/dragging
 function drag(event) {
     if (isDragging) {
+        // Get mouse position
         const currentPosition = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
-        currentTranslate = prevTranslate + currentPosition - startPos;
+
+        // Set directions back to default
+        directions.left = false;
+        directions.right = false;
 
         // Check if mouse moved left, right otherwise
         if (currentPosition < prevMouseX) {
+            directions.left = true;
+            indexController(directions);
             console.log('Mouse moved left');
         } else {
+            directions.right = true;
+            indexController(directions)
             console.log('Mouse moved right');
         }
 
@@ -41,16 +95,27 @@ function drag(event) {
 // Event handler for ending of sliding/dragging
 function dragEnd() {
     if (isDragging) {
-        prevTranslate = currentTranslate;
         isDragging = false;
     }
 }
+
+// Set current active index
+function setCurrentActiveIndex(currentActiveIndex, articleLinks) {
+    articleLinks.forEach((li, index) => {
+        if (index === currentActiveIndex) {
+            li.classList.add('active');
+        };
+    });
+}
+
+// Check if index exist to prevent out of range error
+
 /* 
 Helpers to handle drag or slide behavior ends here
 */
 
 /* 
-Utility to handle screen resize behavior starts here
+Utility to handle screen resize behavior of .page-horisontal-section starts here
 */
 //  Makes sure that events are created only on mobile screens, othervise events removed
 function handleResizeForMainPageHorisontalSection() {
@@ -58,16 +123,13 @@ function handleResizeForMainPageHorisontalSection() {
 
     // Handle resize of .page-horisontal-section
     if (mediaQueryMobile.matches) {
-        addMobileClassToHorisontalSectionNavLinks(horisontalSections, drag, dragStart, dragEnd);
+        addEventListeners(horisontalSections, drag, dragStart, dragEnd);
     } else {
-        removeMobileClassFromHorisontalSectionNavLinks(horisontalSections, drag, dragStart, dragEnd);
+        removeEventListeners(horisontalSections, drag, dragStart, dragEnd);
     }
 
-    /*
-     Code responsible for .page-horisontal-section starts here 
-     */
-    //This code creates mobile view for main page .page-horisontal-section
-    function addMobileClassToHorisontalSectionNavLinks(horisontalSections, drag, dragStart, dragEnd) {
+    // This code adds event listners to .nav-links
+    function addEventListeners(horisontalSections, drag, dragStart, dragEnd) {
         for (const horisontalSection of horisontalSections) {
             const navLinks = horisontalSection.querySelector(".nav-links");
 
@@ -86,7 +148,8 @@ function handleResizeForMainPageHorisontalSection() {
         }
     }
 
-    function removeMobileClassFromHorisontalSectionNavLinks(horisontalSections, drag, dragStart, dragEnd) {
+    // This code removes event listners to .nav-links
+    function removeEventListeners(horisontalSections, drag, dragStart, dragEnd) {
         for (const horisontalSection of horisontalSections) {
             const navLinks = horisontalSection.querySelector(".nav-links");
             // Start draging
@@ -103,20 +166,17 @@ function handleResizeForMainPageHorisontalSection() {
             navLinks.removeEventListener('touchcancel', dragEnd);
         }
     }
-    /*
-   Code responsible for .page-horisontal-section starts here 
-   */
 }
 
-// Fires image source option generation on resize event
+// Fires resize handler on device resize
 addEventListener("resize", () => {
     handleResizeForMainPageHorisontalSection();
 });
 
-// Fires image source option generation after page loaded to match initial device width
+// Fires resize handler after content loaded
 addEventListener("DOMContentLoaded", () => {
     handleResizeForMainPageHorisontalSection();
 });
 /* 
-Utility to handle screen resize behavior ends here 
+Utility to handle screen resize behavior of .page-horisontal-section ends here
 */

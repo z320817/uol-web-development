@@ -236,12 +236,12 @@ function handleResize() {
  */
 }
 
-// Fires image source option generation on resize event
+// Fires resize handler on device resize
 addEventListener("resize", () => {
   handleResize();
 });
 
-// Fires image source option generation after page loaded to match initial device width
+// Fires resize handler after content loaded
 addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
