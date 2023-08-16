@@ -5,11 +5,7 @@ let isMobileFooterCreated = false;
 /* Ends store initial footer state */
 
 /* 
-Utility to generate images adopted for screen size starts here
-It takes image class and custom atribute data tag and
-produces generic implementation of <picture> element 
-with alternative source for relaibility and adopted media size
-to serve correct image for correct type of device
+Utility to handle screen resize behavior starts here
 */
 function handleResize() {
   if (!isMobileFooterCreated) {
@@ -127,13 +123,13 @@ function handleResize() {
 
   //This code reorders footer node for mobile view
   function createMobileFooter() {
-    const footer = document.getElementById("footer");
+    const footerSection = document.getElementById("footer");
 
     // Create container to hold set of updated elements
     const container = document.createElement("div");
     container.setAttribute("class", "footer-section footer-container");
 
-    footer.appendChild(container);
+    footerSection.appendChild(container);
 
     // Store references to all nodes to be moved
     const elementsToManipulate = {
@@ -155,43 +151,48 @@ function handleResize() {
       footerPoliciesText: elementsToManipulate.footerContainer.childNodes[6],
     };
 
-    // Node moving function
-    const insertElement = (element, reference) => {
-      elementsToManipulate.footerContainer.insertBefore(element, reference);
-    };
-
     // Move nodes to the new positions
     insertElement(
+      elementsToManipulate.footerContainer,
       elementsToManipulate.newsletterText,
       insertionReferences.newsletterText
     );
     insertElement(
+      elementsToManipulate.footerContainer,
       elementsToManipulate.newsletterForm,
       insertionReferences.newsletterForm
     );
     insertElement(
+      elementsToManipulate.footerContainer,
       elementsToManipulate.footerPartners,
       insertionReferences.footerPartners
     );
     insertElement(
+      elementsToManipulate.footerContainer,
       elementsToManipulate.footerPolicies,
       insertionReferences.footerPolicies
     );
     insertElement(
+      elementsToManipulate.footerContainer,
       elementsToManipulate.footerPoliciesText,
       insertionReferences.footerPoliciesText
     );
 
     // Delete all the rest elements
-    const footerSections = footer.getElementsByClassName("footer-section");
+    const footerSections = footerSection.getElementsByClassName("footer-section");
 
     for (let i = 0; i < footerSections.length; i++) {
-      footer.removeChild(footerSections[1]);
+      footerSection.removeChild(footerSections[1]);
     }
 
     // Check if footer state was modified
     isMobileFooterCreated = true;
   }
+
+  // Node moving function
+  function insertElement(container, element, reference) {
+    container.insertBefore(element, reference);
+  };
 
   function restoreFooterState(fragment) {
     // Find the existing <footer> element
@@ -235,7 +236,7 @@ addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
 /* 
-Utility to generate images adopted for screen size ends here
+Utility to handle screen resize behavior ends here 
 */
 
 /* 
