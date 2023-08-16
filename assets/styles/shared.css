@@ -14,7 +14,9 @@ a {
   font-family: Inter, sans-serif;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   text-transform: lowercase;
 }
 
@@ -268,7 +270,7 @@ footer a {
 
 .fixed-main-header {
   position: absolute;
-  left: 2.1em;
+  left: 1.6em;
 }
 
 /* Dynamic header blinking cursor style ends here  */
@@ -421,6 +423,10 @@ footer a {
 
   p {
     font-size: 0.8em;
+  }
+
+  .fixed-main-header {
+    left: 2.1em;
   }
 
   /* Shared styles ends here */
