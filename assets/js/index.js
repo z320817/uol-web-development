@@ -16,42 +16,40 @@ horisontalSections.forEach((_, index) => {
 });
 
 // Event handler for start sliding/dragging
-function indexController(direction) {
-    for (const horisontalSection of horisontalSections) {
-        // Count article elements in index
-        let articleCount = 0;
-        // Find the nav-links element within the section
-        const articleLinks = horisontalSection.querySelectorAll('.page-horisontal-section-tile');
-        // Get the section ID from the data attribute
-        sectionId = horisontalSection.getAttribute('data-section-id');
+function indexController(direction, sectionId) {
+
+    // Count article elements in index
+    let articleCount = 0;
+    // Get affected horisontal section
+    const horisontalSection = document.querySelector(`[data-section-id="${sectionId}"]`);
+    // Find the nav-links element within the section
+    const articleLinks = horisontalSection.querySelectorAll('.page-horisontal-section-tile');
+
+    // Remove 'active' class from all <li> elements
+    articleLinks.forEach((li, index) => {
+        if (li.classList.contains('active')) {
+            activeIndexes[sectionId] = index;
+        };
+        li.classList.remove('active');
+        articleCount++;
+    });
 
 
-        // Remove 'active' class from all <li> elements
-        articleLinks.forEach((li, index) => {
-            if (li.classList.contains('active')) {
-                activeIndexes[sectionId] = index;
-            };
-            li.classList.remove('active');
-            articleCount++;
-        });
+    sectionCurrentIndex = activeIndexes[sectionId];
+    const isIndexExist = typeof sectionCurrentIndex === 'number' && !isNaN(sectionCurrentIndex) && sectionCurrentIndex !== undefined;
 
-
-        sectionCurrentIndex = activeIndexes[sectionId];
-        const isIndexExist = typeof sectionCurrentIndex === 'number' && !isNaN(sectionCurrentIndex) && sectionCurrentIndex !== undefined;
-
-        if (isIndexExist) {
-            if (direction.left) {
-                activeIndexes[sectionId] = (activeIndexes[sectionId] - 1 + articleCount) % articleCount;
-                setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
-            } else {
-                activeIndexes[sectionId] = (activeIndexes[sectionId] + 1) % articleCount;
-                setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
-            }
+    if (isIndexExist) {
+        if (direction.left) {
+            activeIndexes[sectionId] = (activeIndexes[sectionId] - 1 + articleCount) % articleCount;
+            setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
+        } else {
+            activeIndexes[sectionId] = (activeIndexes[sectionId] + 1) % articleCount;
+            setCurrentActiveIndex(activeIndexes[sectionId], articleLinks);
         }
-
-        // Add 'active' class to the <li> element at the target index
-        // articleLinks[targetIndex].classList.add('active');
     }
+
+    // Add 'active' class to the <li> element at the target index
+    // articleLinks[targetIndex].classList.add('active');
 }
 
 // Event handler for start sliding/dragging
@@ -69,6 +67,10 @@ function dragStart(event) {
 
 // Event handler for process of sliding/dragging
 function drag(event) {
+    // Get event affected section ID
+    const sectionId = getSectionId(event);
+
+    // const updatedSectionId = document.parentElement(event.srcElement)
     if (isDragging) {
         // Get mouse position
         const currentPosition = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
@@ -80,12 +82,10 @@ function drag(event) {
         // Check if mouse moved left, right otherwise
         if (currentPosition < prevMouseX) {
             directions.left = true;
-            indexController(directions);
-            console.log('Mouse moved left');
+            indexController(directions, sectionId);
         } else {
             directions.right = true;
-            indexController(directions)
-            console.log('Mouse moved right');
+            indexController(directions, sectionId)
         }
 
         prevMouseX = currentPosition;
@@ -106,6 +106,23 @@ function setCurrentActiveIndex(currentActiveIndex, articleLinks) {
             li.classList.add('active');
         };
     });
+}
+
+// Traverse horisontal section up from event source to sectioon ID
+function getSectionId(event) {
+    let childElement = event.target;
+
+    let sectionId;
+
+    while (childElement) {
+        if (childElement.classList.contains('page-horisontal-section')) {
+            sectionId = childElement.getAttribute('data-section-id');
+            break;
+        }
+        childElement = childElement.parentElement;
+    }
+
+    return sectionId;
 }
 
 // Check if index exist to prevent out of range error
