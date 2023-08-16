@@ -250,7 +250,8 @@ footer {
 }
 
 footer h5 {
-  font-size: 1em;
+  font-size: 1.2em;
+  text-transform: lowercase;
 }
 
 footer p {

@@ -102,6 +102,10 @@
     }
 
     .page-horisontal-section .nav-links li:first-child {
+        margin-right: 0;
+    }
+
+    .page-horisontal-section .nav-links .active {
         display: flex;
         flex-direction: column;
         margin-right: 0;
