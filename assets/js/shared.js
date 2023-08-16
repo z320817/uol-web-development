@@ -4,28 +4,31 @@ let footer = null;
 let isMobileFooterCreated = false;
 /* Ends store initial footer state */
 
+/* Start store media query constants */
+// Store Media Query constants
+const mobileQuery = "(max-width: 575.98px)";
+const tabletQuery = "(min-width: 576px) and (max-width: 991.98px)";
+const desktopQuery = "(min-width: 992px)";
+
+// Match current device width
+const mediaQueryMobile = window.matchMedia(mobileQuery);
+const mediaQueryTablet = window.matchMedia(tabletQuery);
+const mediaQueryDesktop = window.matchMedia(desktopQuery);
+/* End store media query constants */
+
 /* 
 Utility to handle screen resize behavior starts here
 */
 function handleResize() {
-  if (!isMobileFooterCreated) {
-    copyFooterSectionInMemory();
-  }
-
-  // Store Media Query constants
-  const mobileQuery = "(max-width: 575.98px)";
-  const tabletQuery = "(min-width: 576px) and (max-width: 991.98px)";
-  const desktopQuery = "(min-width: 992px)";
-
-  // Store Media Folder constants
+  // Store Media Folder constants for images
   const mobilePath = "assets/images/mobile/";
   const tabletPath = "assets/images/mobile/";
   const desktopPath = "assets/images/desktop/";
 
-  // Match current device width
-  const mediaQueryMobile = window.matchMedia(mobileQuery);
-  const mediaQueryTablet = window.matchMedia(tabletQuery);
-  const mediaQueryDesktop = window.matchMedia(desktopQuery);
+  // Create footer copy on page load  
+  if (!isMobileFooterCreated) {
+    copyFooterSectionInMemory();
+  }
 
   // Get elements with class name 'box'
   const images = document.getElementsByClassName("responsive-img");
@@ -49,7 +52,7 @@ function handleResize() {
     }
   }
 
-  // Handle resize of elements besides images
+  // Handle resize of footer
   if (mediaQueryMobile.matches) {
     if (!isMobileFooterCreated) {
       createMobileFooter();
@@ -121,6 +124,9 @@ function handleResize() {
     }
   }
 
+  /*
+  Code responsible for <footer> starts here 
+  */
   //This code reorders footer node for mobile view
   function createMobileFooter() {
     const footerSection = document.getElementById("footer");
@@ -194,6 +200,7 @@ function handleResize() {
     container.insertBefore(element, reference);
   };
 
+  // Restores <footer> version copied on DOMContentLoaded event
   function restoreFooterState(fragment) {
     // Find the existing <footer> element
     const footerSection = document.getElementById("footer");
@@ -224,6 +231,9 @@ function handleResize() {
       footer = footerSection.cloneNode(true); // Clone with children
     }
   }
+  /*
+ Code responsible for <footer> ends here 
+ */
 }
 
 // Fires image source option generation on resize event
@@ -243,19 +253,6 @@ Utility to handle screen resize behavior ends here
 Static cursor for headers handler starts here
 This code creates style for headers accross entire website
 */
-// Get elements with class name 'box'
-const spanElements = document.getElementsByClassName("static-cursor");
-
-for (const spanElement of spanElements) {
-  // Create a text node
-  const textNode = document.createTextNode("| ");
-  // Append the text node to the <span> element
-  spanElement.appendChild(textNode);
-}
-/* 
-Static cursor for headers handler ends here
-*/
-
 // Get elements with class name 'static-cursor'
 const staticHeadersSpanElements = document.getElementsByClassName("static-cursor");
 
@@ -271,6 +268,27 @@ for (const spanElement of staticHeadersSpanElements) {
 }
 /* 
 Static cursor for headers handler ends here
+*/
+
+/* 
+Static cursor for article headers handler ends here
+*/
+
+// Get elements with class name 'static-cursor'
+const staticArticleHeadersSpanElements = document.getElementsByClassName("tilda");
+
+for (const spanElement of staticArticleHeadersSpanElements) {
+  // Create a text node
+  const textNode = document.createTextNode("~ ");
+
+  // Clear element
+  spanElement.innerHTML = "";
+
+  // Append the text node to the <span> element
+  spanElement.appendChild(textNode);
+}
+/* 
+Static cursor for article headers handler ends here
 */
 
 /* 

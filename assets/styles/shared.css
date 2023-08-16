@@ -121,7 +121,7 @@ header .logo p {
 /* Footer styles starts here */
 footer {
   display: flex;
-  margin-top: 4em;
+  margin-top: 6em;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
@@ -425,8 +425,13 @@ footer a {
     font-size: 0.8em;
   }
 
+  .blinking-cursor {
+    font-size: 1.4em;
+  }
+
   .fixed-main-header {
     left: 2.1em;
+    font-size: 1.4em;
   }
 
   /* Shared styles ends here */
@@ -504,7 +509,7 @@ footer a {
   }
 
   .footer-container>* {
-    margin: 1em 2em;
+    margin: 0 2em;
   }
 
   .footer-section .footer-text {
@@ -514,6 +519,7 @@ footer a {
   .footer-section .footer-newsletter {
     margin: 1em 2em;
     width: auto;
+    height: 3em;
   }
 
   .footer-section .footer-partners .nav-links {
