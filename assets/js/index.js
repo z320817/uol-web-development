@@ -9,6 +9,7 @@ let prevMouseX = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 
+// Event handler for start sliding/dragging
 function dragStart(event) {
     if (event.type === 'touchstart') {
         startPos = event.touches[0].clientX;
@@ -20,6 +21,7 @@ function dragStart(event) {
     isDragging = true;
 }
 
+// Event handler for process of sliding/dragging
 function drag(event) {
     if (isDragging) {
         const currentPosition = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
@@ -36,6 +38,7 @@ function drag(event) {
     }
 }
 
+// Event handler for ending of sliding/dragging
 function dragEnd() {
     if (isDragging) {
         prevTranslate = currentTranslate;
@@ -49,6 +52,7 @@ Helpers to handle drag or slide behavior ends here
 /* 
 Utility to handle screen resize behavior starts here
 */
+//  Makes sure that events are created only on mobile screens, othervise events removed
 function handleResizeForMainPageHorisontalSection() {
 
 
