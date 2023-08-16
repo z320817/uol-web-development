@@ -16,6 +16,10 @@
     margin: 1.6em 0;
 }
 
+.page-horisontal-section-header {
+    white-space: nowrap;
+}
+
 .page-horisontal-section-sub-header {
     margin-left: 2em;
     font-size: .9em;
@@ -24,6 +28,7 @@
 .page-horisontal-section .nav-links {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .page-horisontal-section-article-header {
@@ -112,6 +117,10 @@
 
     .page-horisontal-section .nav-links li a h5 {
         font-size: 1em;
+    }
+
+    .page-horisontal-section-image {
+        width: 100%;
     }
 
     /* Page horizontal section styles ends here */

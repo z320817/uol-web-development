@@ -40,7 +40,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black-color);
-  padding: 0.4em 2em;
+  padding: 1.8em 2em;
   color: var(--white-color);
 }
 
@@ -437,12 +437,24 @@ footer a {
   /* Shared styles ends here */
 
   /* Header styles starts here */
+  .main-nav {
+    column-gap: 1em;
+  }
+
   .main-nav .logo a p {
     font-size: 11.4pt;
   }
 
   .main-nav .search {
+    background-color: var(--black-color);
+  }
+
+  .main-nav .search p {
     display: none;
+  }
+
+  .main-nav .search img {
+    width: 1.2em;
   }
 
   .main-nav .login {
@@ -454,7 +466,7 @@ footer a {
   }
 
   .main-nav .mobile-menu {
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .main-nav .login img {
