@@ -21,9 +21,13 @@ Utility to handle screen resize behavior starts here
 */
 function handleResize() {
   // Store Media Folder constants for images
-  const mobilePath = "assets/images/mobile/";
-  const tabletPath = "assets/images/mobile/";
-  const desktopPath = "assets/images/desktop/";
+  let mobilePath = "assets/images/mobile/";
+  let tabletPath = "assets/images/mobile/";
+  let desktopPath = "assets/images/desktop/";
+  let internalPagesPath = "../";
+
+  // Change path to the image if page is other that index.html
+  checkIfPageIsInternal();
 
   // Create footer copy on page load  
   if (!isMobileFooterCreated) {
@@ -67,12 +71,14 @@ function handleResize() {
     }
   }
 
-  // Generates HTML for responsive images according to device width with fall back types similar to this:
-
+  /*  
+  Generates HTML for responsive images according to device width starts here 
+  */
   /* 
+  Example:
     <picture class="responsive-img" data-image-src="avalanche-logo" data-image-types="svg,png" data-image-section="header">
         <source srcset="assets/images/mobile/header/avalanche-logo.png" media="(min-width: 576px) and (max-width: 991.98px)" type="image/png">
-        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 576px) and (max-width: 991.98px)" type="image/svg">          
+        <source srcset="assets/images/mobile/header/avalanche-logo.svg" media="(min-width: 576px) and (max-width: 991.98px)" type="image/svg+xml">          
         <img alt="Avalanche cyber news logotype" src="assets/images/mobile/header/avalanche-logo.svg">
     </picture>
   */
@@ -123,6 +129,21 @@ function handleResize() {
       }
     }
   }
+
+  // Check if page is internal and change path to the image
+  function checkIfPageIsInternal() {
+    const currentPath = window.location.href;
+    const url = new URL(currentPath);
+
+    if (url.pathname.includes("pages")) {
+      mobilePath = internalPagesPath + mobilePath;
+      tabletPath = internalPagesPath + tabletPath;
+      desktopPath = internalPagesPath + desktopPath;
+    }
+  }
+  /*  
+  Generates HTML for responsive images according to device width ends here 
+  */
 
   /*
   Code responsible for <footer> starts here 
