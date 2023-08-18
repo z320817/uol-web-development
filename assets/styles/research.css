@@ -52,6 +52,27 @@
     width: 46%;
 }
 
+.article-header {
+    font-size: 2em;
+    margin-bottom: .2em;
+}
+
+.research-page-articles-section {
+    margin: 2em 0;
+}
+
+.article-container {
+    margin: 2em 0;
+}
+
+.article-meta-data {
+    margin: .8em 0;
+}
+
+.article-author {
+    margin: 0 .3em;
+}
+
 /* Research page promoted section ends here */
 
 /* Media queries for responsive design and mobile layout starts here */

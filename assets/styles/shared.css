@@ -276,6 +276,24 @@ footer a {
 
 /* Dynamic header blinking cursor style ends here  */
 
+/* Load more styles starts here */
+.load-more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+#load-more-btn {
+  padding: .4em 6em;
+  text-transform: lowercase;
+  background-color: var(--grey-color);
+  white-space: nowrap;
+}
+
+/* Load more styles ends here */
+
 
 /* Media queries for responsive design and mobile layout starts here */
 
