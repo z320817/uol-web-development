@@ -1,0 +1,83 @@
+/* Import global constants */
+@import url("constants.css");
+
+/* Research page promoted section starts here */
+.page-sub-header {
+    width: 50%;
+}
+
+.research-page-promoted-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 4em;
+    margin: 2em 0;
+}
+
+.promoted-section-main-column,
+.promoted-section-secondary-column {
+    display: flex;
+    width: 50%;
+}
+
+.promoted-section-main-column {
+    flex-direction: column;
+}
+
+.promoted-section-main-column h5 {
+    font-size: 2em;
+}
+
+.research-page-promoted-section p {
+    font-size: .9em;
+}
+
+.promoted-section-main-column a picture img {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.promoted-section-secondary-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.promoted-section-secondary-column h5 {
+    font-size: .9em;
+}
+
+.promoted-section-secondary-column a {
+    width: 46%;
+}
+
+/* Research page promoted section ends here */
+
+/* Media queries for responsive design and mobile layout starts here */
+/* Desktop Styles (min-width: 992px) */
+@media (min-width: 992px) {
+
+    /* Research page promoted section starts here */
+
+    /* Research page promoted section starts here */
+}
+
+/* Tablet Styles (up to 991.98px) */
+@media (max-width: 991.98px) {
+
+    /* Research page promoted section starts here */
+
+    /* Research page promoted section ends here */
+}
+
+/* Mobile Styles (up to 575.98px) */
+@media (max-width: 575.98px) {
+
+    /* Research page promoted section starts here */
+
+
+    /* Research page promoted section ends here */
+}
+
+/* Media queries for responsive design and mobile layout ends here */
