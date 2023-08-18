@@ -96,7 +96,36 @@
 @media (max-width: 575.98px) {
 
     /* Research page promoted section starts here */
+    .page-sub-header {
+        width: 100%;
+    }
 
+    .research-page-promoted-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .promoted-section-main-column {
+        width: 100%;
+    }
+
+    .promoted-section-secondary-column {
+        width: 100%;
+        margin: 2em 0;
+        row-gap: 4em;
+    }
+
+    .promoted-section-main-column a picture img {
+        margin-bottom: .4em;
+    }
+
+    .research-page-promoted-section p {
+        margin: .9em 0;
+    }
+
+    .promoted-section-secondary-column h5 {
+        font-size: 1.4em;
+    }
 
     /* Research page promoted section ends here */
 }

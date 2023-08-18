@@ -1,5 +1,5 @@
 /* 
-Helpers to handle drag or slide behavior starts here
+Helpers to handle touch/mouse drag or slide behavior starts here
 */
 const horisontalSections = document.querySelectorAll(".page-horisontal-section");
 
@@ -128,7 +128,7 @@ function getSectionId(event) {
 // Check if index exist to prevent out of range error
 
 /* 
-Helpers to handle drag or slide behavior ends here
+Helpers to handle touch/mouse drag or slide behavior ends here
 */
 
 /* 
