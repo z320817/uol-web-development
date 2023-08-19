@@ -82,7 +82,7 @@ header {
 }
 
 .main-nav .search p {
-  padding-left: .8em;
+  padding-left: 0.8em;
   font-size: 14.4pt;
 }
 
@@ -171,7 +171,7 @@ footer {
 }
 
 .footer-section .footer-text h5 {
-  margin: .4em 0;
+  margin: 0.4em 0;
 }
 
 .footer-section .footer-newsletter {
@@ -188,7 +188,7 @@ footer {
 
 .footer-section .footer-newsletter img {
   min-width: 1.2em;
-  margin-left: .4em;
+  margin-left: 0.4em;
 }
 
 .footer-section .footer-nav .nav-links li:first-child {
@@ -200,19 +200,19 @@ footer {
 }
 
 .footer-section .footer-nav .nav-links li {
-  margin: 0 .4em;
+  margin: 0 0.4em;
 }
 
 .footer-section .footer-newsletter button {
   height: 100%;
   min-width: 6em;
-  padding: 0 .4em;
+  padding: 0 0.4em;
   color: var(--white-color);
   background-color: var(--black-color);
 }
 
 .footer-section .footer-newsletter p {
-  margin-left: .4em;
+  margin-left: 0.4em;
   overflow: hidden;
 }
 
@@ -286,7 +286,7 @@ footer a {
 }
 
 #load-more-btn {
-  padding: .4em 6em;
+  padding: 0.4em 6em;
   text-transform: lowercase;
   background-color: var(--grey-color);
   white-space: nowrap;
@@ -294,12 +294,10 @@ footer a {
 
 /* Load more styles ends here */
 
-
 /* Media queries for responsive design and mobile layout starts here */
 
 /* Desktop Styles (min-width: 992px) */
 @media (min-width: 992px) {
-
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -310,7 +308,7 @@ footer a {
   }
 
   h2 {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   h3,
@@ -344,7 +342,6 @@ footer a {
 
 /* Tablet Styles (up to 991.98px) */
 @media (max-width: 991.98px) {
-
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -355,7 +352,7 @@ footer a {
   }
 
   h2 {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   h3,
@@ -425,7 +422,6 @@ footer a {
 
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
-
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -539,7 +535,7 @@ footer a {
     background-color: var(--grey-color);
   }
 
-  .footer-container>* {
+  .footer-container > * {
     margin: 0 2em;
   }
 
@@ -567,6 +563,21 @@ footer a {
   }
 
   /* Footer styles ends here */
+
+  /* Featured section styles starts here */
+  .featured {
+    border-top: 0.1em var(--black-color) solid;
+  }
+
+  #featured-section picture img {
+    width: 100%;
+  }
+
+  .featured-page-header {
+    margin: 1em 0;
+    font-size: 1.4em;
+  }
+  /* Featured section styles ends here */
 }
 
 /* Media queries for responsive design and mobile layout ends here */
