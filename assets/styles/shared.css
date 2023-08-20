@@ -76,9 +76,9 @@ header {
 }
 
 .main-nav .search {
-  padding: 6pt 12pt;
-  height: 2em;
-  margin: auto 0pt;
+  padding: .2em 1em;
+  height: 1.8em;
+  margin: auto 0;
 }
 
 .main-nav .search p {
