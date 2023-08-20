@@ -1,0 +1,22 @@
+/* Import global constants */
+@import url("constants.css");
+
+/* Policy page styles starts here */
+.policy-sub-header {
+  margin: 2em 0;
+  background-color: var(--black-color);
+  padding: .8em .8em;
+}
+
+.policy-page-main-content h3 {
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+.policy-page-content footer {
+  margin-top: 2em;
+  padding: .2em .2em;
+  justify-content: flex-start;
+}
+
+/* Policy page styles ends here */
