@@ -2,6 +2,34 @@
 @import url("constants.css");
 
 /* Article page styles starts here */
+.article-page-content {
+  display: table;
+  clear: both;
+}
+
+.article-sub-header {
+  float: left;
+  padding-right: 2em;
+  width: 60%;
+}
+
+.article-page-image {
+  float: left;
+  padding-right: 2em;
+  width: 60%;
+}
+
+.article-page-main-content {
+  float: left;
+  padding-right: 2em;
+  width: 60%;
+}
+
+.article-related-content {
+  float: right;
+  padding-left: 2em;
+  width: 40%;
+}
 
 /* Article page styles ends here */
 
