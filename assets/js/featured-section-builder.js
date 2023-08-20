@@ -54,6 +54,10 @@ function handleFeaturedSectionBehavior() {
     h3Element.classList.add("featured-page-header");
     h3Element.textContent = "| Featured";
 
+    // Create link to the featured article
+    const linkElement = document.createElement("a");
+    linkElement.setAttribute("href", "../pages/article.html");
+
     // Create the picture element with classes 'responsive-img'
     // for compatability with shared.js responsive image utility
     const pictureElement = document.createElement("picture");
@@ -77,10 +81,13 @@ function handleFeaturedSectionBehavior() {
     h5Element.classList.add("featured-page-title");
     h5Element.textContent = "Deep-dive, compare, decide";
 
+    // Wrap article with link to the featured article
+    linkElement.appendChild(pictureElement);
+    linkElement.appendChild(h5Element);
+
     // Append the elements to create mobile featured section
     featuredDiv.appendChild(h3Element);
-    featuredDiv.appendChild(pictureElement);
-    featuredDiv.appendChild(h5Element);
+    featuredDiv.appendChild(linkElement);
 
     // Append the 'featured' div to the #featured-section element
     featuredSectionElement.appendChild(featuredDiv);
