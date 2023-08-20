@@ -40,7 +40,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black-color);
-  padding: 1.8em 2em;
+  padding: .8em 2em;
   color: var(--white-color);
 }
 
@@ -298,6 +298,7 @@ footer a {
 
 /* Desktop Styles (min-width: 992px) */
 @media (min-width: 992px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -342,6 +343,7 @@ footer a {
 
 /* Tablet Styles (up to 991.98px) */
 @media (max-width: 991.98px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -422,6 +424,7 @@ footer a {
 
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
+
   /* Shared styles starts here */
   body {
     font-size: 1em;
@@ -535,7 +538,7 @@ footer a {
     background-color: var(--grey-color);
   }
 
-  .footer-container > * {
+  .footer-container>* {
     margin: 0 2em;
   }
 
@@ -577,6 +580,7 @@ footer a {
     margin: 1em 0;
     font-size: 1.4em;
   }
+
   /* Featured section styles ends here */
 }
 
