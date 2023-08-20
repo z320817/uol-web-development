@@ -6,7 +6,7 @@
   width: 50%;
 }
 
-.research-page-promoted-section {
+.page-layout-promoted-section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -28,7 +28,7 @@
   font-size: 2em;
 }
 
-.research-page-promoted-section p {
+.page-layout-promoted-section p {
   font-size: 0.9em;
 }
 
@@ -57,7 +57,7 @@
   margin-bottom: 0.2em;
 }
 
-.research-page-articles-section {
+.page-layout-articles-section {
   margin: 2em 0;
 }
 
@@ -78,12 +78,13 @@
 /* Media queries for responsive design and mobile layout starts here */
 /* Mobile Styles (up to 575.98px) */
 @media (max-width: 575.98px) {
+
   /* Research page promoted section starts here */
   .page-sub-header {
     width: 100%;
   }
 
-  .research-page-promoted-section {
+  .page-layout-promoted-section {
     display: flex;
     flex-direction: column;
   }
@@ -102,7 +103,7 @@
     margin-bottom: 0.4em;
   }
 
-  .research-page-promoted-section p {
+  .page-layout-promoted-section p {
     margin: 0.9em 0;
   }
 
