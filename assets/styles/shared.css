@@ -96,6 +96,12 @@ header {
   align-items: center;
 }
 
+.main-nav .login a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-nav .mobile-menu {
   min-width: 36pt;
 }
