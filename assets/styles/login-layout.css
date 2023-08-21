@@ -1,0 +1,19 @@
+/* Import global constants */
+@import url("constants.css");
+
+/* Login page styles starts here */
+
+
+/* Login page styles ends here */
+
+/* Media queries for responsive design and mobile layout starts here */
+/* Mobile Styles (up to 575.98px) */
+@media (max-width: 575.98px) {
+
+  /* Login page styles starts here */
+
+
+  /* Login page styles ends here */
+}
+
+/* Media queries for responsive design and mobile layout ends here */
