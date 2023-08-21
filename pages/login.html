@@ -104,33 +104,58 @@
     <!-- Header content ends here -->
 
     <!-- Main content of the page starts here -->
-    <main>
-        <h1 class="page-header"><span class="blinking-cursor"></span><span class="fixed-main-header">Login</span>
-        </h1>
-        <h2 class="page-sub-header">Welcome $USER_NAME. Please, login. Having troubles to login? Use helpful links
-            bellow.</h2>
+    <main id="login-main-content">
         <!-- Start page section: login layout form section starts here -->
         <section class="login-layout-form-section">
-            <div class="login-layout-form-main-column">
-
+            <h1 class="page-header"><span class="blinking-cursor"></span><span class="fixed-main-header">Login</span>
+            </h1>
+            <h2 class="page-sub-header">welcome $USER_NAME. <br>Please, login. Having troubles to login? Use helpful
+                links
+                bellow.</h2>
+            <div class="login-layout-form-column">
+                <form class="login-form">
+                    <div class="login-form-input-group">
+                        <label for="username">
+                            <picture>
+                                <source srcset="../assets/icons/user-name.svg" media="(max-width: 575.98px)"
+                                    type="image/svg+xml">
+                                <img alt="Search icon" src="../assets/icons/user-name.svg">
+                            </picture>
+                            Username
+                        </label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="login-form-input-group">
+                        <label for="password">
+                            <picture>
+                                <source srcset="../assets/icons/password.svg" media="(max-width: 575.98px)"
+                                    type="image/svg+xml">
+                                <img alt="Search icon" src="../assets/icons/password.svg">
+                            </picture>
+                            Password
+                        </label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" id="login-btn">Login</button>
+                </form>
+                <div class="login-form-helper-links">
+                    <a href="#">I can't login</a>
+                    <a href="#">I don't have an account</a>
+                </div>
             </div>
         </section>
         <!-- End page section: login layout form section ends here -->
 
         <!-- Start page section: login layout form section starts here -->
-        <section class="page-layout-image-section" id="disappearing-section">
-            <!-- Start image container -->
-            <div class="login-image-container">
-
-            </div>
-            <!-- End image container -->
-        </section>
+        <div class="page-layout-image-section" id="disappearing-section">
+            <div class="login-image-container"></div>
+        </div>
         <!-- Start page section: login layout form section ends here -->
     </main>
     <!-- Main content of the page ends here -->
 
     <!-- Footer content starts here -->
-    <footer id="footer">
+    <footer id="footer" class="login-footer">
         <div class="footer-section" id="logo-section">
             <div class="footer-logo">
                 <a href="../index.html">

@@ -2,7 +2,75 @@
 @import url("constants.css");
 
 /* Login page styles starts here */
+#login-main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+}
 
+.login-layout-form-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 50%;
+}
+
+.login-layout-form-section .page-sub-header {
+  font-size: 1em;
+  text-transform: none;
+}
+
+.login-layout-form-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 8em 0;
+}
+
+.login-form .login-form-input-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1.4em 0;
+}
+
+.login-form-input-group input {
+  width: 80%;
+  padding: .4em .4em;
+  background-color: var(--grey-color);
+}
+
+.login-form-input-group label {
+  width: 20%;
+  min-width: fit-content;
+  text-transform: lowercase;
+  padding: .4em .4em;
+  background-color: var(--grey-color);
+}
+
+.login-form-input-group img {
+  width: .7em;
+  margin-right: .4em;
+}
+
+.page-layout-image-section {
+  width: 50%;
+}
+
+.login-image-container {
+  height: 92vh;
+  background-image: url('../images/desktop/content/login/login-image.jpeg');
+  background-size: cover;
+}
+
+.login-footer {
+  margin-top: 0;
+}
 
 /* Login page styles ends here */
 
