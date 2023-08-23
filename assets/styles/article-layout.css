@@ -108,10 +108,11 @@ main {
 }
 
 .article-related-content {
+  position: sticky;
+  top: 1em;
   float: right;
   padding-left: 2em;
   width: 25%;
-  margin-top: 10%;
 }
 
 .article-related-content h3 {
