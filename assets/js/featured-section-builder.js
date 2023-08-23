@@ -56,22 +56,22 @@ function handleFeaturedSectionBehavior() {
 
     // Create link to the featured article
     const linkElement = document.createElement("a");
-    linkElement.setAttribute("href", "../pages/article.html");
+    linkElement.setAttribute("href", "../articles/protecting-sensitive-data.html");
 
     // Create the picture element with classes 'responsive-img'
     // for compatability with shared.js responsive image utility
     const pictureElement = document.createElement("picture");
     pictureElement.classList.add("responsive-img");
 
-    pictureElement.setAttribute("data-image-src", "placeholder");
-    pictureElement.setAttribute("data-image-types", "svg+xml,png");
+    pictureElement.setAttribute("data-image-src", "protecting-sensitive-data");
+    pictureElement.setAttribute("data-image-types", "jpg");
     pictureElement.setAttribute("data-image-section", "content/articles");
 
     // Default featured image for picture element
     const imgElement = document.createElement("img");
     imgElement.alt = "Article image";
     imgElement.src =
-      "../assets/images/desktop/content/articles/placeholder.png";
+      "../assets/images/mobile/content/articles/protecting-sensitive-data.jpg";
     imgElement.classList.add("featured-section-image");
 
     pictureElement.appendChild(imgElement);
@@ -79,7 +79,7 @@ function handleFeaturedSectionBehavior() {
     // Create the h5 element with class 'featured-page-title'
     const h5Element = document.createElement("h5");
     h5Element.classList.add("featured-page-title");
-    h5Element.textContent = "Deep-dive, compare, decide";
+    h5Element.textContent = "Protecting Sensitive Data";
 
     // Wrap article with link to the featured article
     linkElement.appendChild(pictureElement);

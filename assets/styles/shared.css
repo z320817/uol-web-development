@@ -377,6 +377,10 @@ footer a {
   /* Shared styles ends here */
 
   /* Header styles starts here */
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
   .main-nav .logo a p {
     font-size: 0.8em;
   }
@@ -386,7 +390,15 @@ footer a {
   }
 
   .main-nav .nav-links {
-    display: none;
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em;
+  }
+
+  .main-nav .nav-links li {
+    margin: 1em 0;
   }
 
   .main-nav .mobile-menu {
@@ -486,7 +498,15 @@ footer a {
   }
 
   .main-nav .nav-links {
-    display: none;
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em;
+  }
+
+  .main-nav .nav-links li {
+    margin: 1em 0;
   }
 
   .main-nav .mobile-menu {
@@ -588,6 +608,36 @@ footer a {
   }
 
   /* Featured section styles ends here */
+}
+
+/* Mobile Styles (up to 575.98px) */
+@media (max-width: 300.98px) {
+
+  /* Header styles starts here */
+  .main-nav .search {
+    display: none;
+  }
+
+  .main-nav .mobile-menu {
+    margin-left: auto;
+  }
+
+  /* Header styles ends here */
+
+  /* Footer styles starts here */
+  .footer-container .footer-partners .nav-links,
+  .footer-container .footer-policies .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .footer-container .footer-newsletter {
+    display: none;
+  }
+
+  /* Footer styles ends here */
 }
 
 /* Media queries for responsive design and mobile layout ends here */
