@@ -2,6 +2,13 @@
 @import url("constants.css");
 
 /* Article page styles starts here */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .article-page-content {
   display: table;
   clear: both;
@@ -37,13 +44,67 @@
 }
 
 .article-page-main-content p {
-  font-size: .8em;
+  font-size: 1em;
+}
+
+.article-page-main-content h2 {
+  font-size: 1.4em;
+  margin: 1em 0;
 }
 
 .article-page-main-content footer {
   margin-top: 1em;
   justify-content: flex-start;
   padding: .2em .2em;
+}
+
+.article-page-main-content footer a {
+  color: var(--white-color);
+}
+
+.article-page-main-content footer a:hover {
+  text-decoration: underline;
+  color: var(--white-color);
+}
+
+.article-page-main-content ol,
+.article-page-main-content ul {
+  margin: 1em 0;
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+
+.article-page-main-content ul {
+  list-style-type: disc;
+}
+
+.article-page-main-content ol {
+  list-style-type: decimal;
+}
+
+.article-page-main-content ul li,
+.article-page-main-content ol li {
+  margin-bottom: 1em;
+}
+
+.article-page-main-content ul li:before,
+.article-page-main-content ol li:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+}
+
+.article-page-main-content ul li strong,
+.article-page-main-content ol li strong {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.article-page-main-content ul li strong:after,
+.article-page-main-content ol li strong:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .article-related-content {
@@ -70,10 +131,13 @@
 @media (max-width: 575.98px) {
 
   /* Article page styles starts here */
+  .article-header {
+    margin-bottom: 2em;
+  }
+
   .article-page-content {
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
   }
 
   .article-sub-header h2 {

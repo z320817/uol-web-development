@@ -135,7 +135,7 @@ function handleResize() {
     const currentPath = window.location.href;
     const url = new URL(currentPath);
 
-    if (url.pathname.includes("pages")) {
+    if (url.pathname !== "/index.html") {
       mobilePath = internalPagesPath + mobilePath;
       tabletPath = internalPagesPath + tabletPath;
       desktopPath = internalPagesPath + desktopPath;
