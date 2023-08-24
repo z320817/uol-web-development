@@ -76,18 +76,35 @@ header {
 }
 
 .main-nav .search {
-  padding: .2em 1em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  padding-right: 1em;
+  padding-left: .4em;
   height: 1.8em;
   margin: auto 0;
 }
 
-.main-nav .search p {
+.main-nav .search input {
   padding-left: 0.8em;
   font-size: 14.4pt;
 }
 
-.main-nav .search p {
+.main-nav .search input {
   color: var(--black-color);
+}
+
+.main-nav .search input {
+  width: 100%;
+  max-width: 150px;
+}
+
+.main-nav .search picture {
+  min-width: 24px;
+}
+
+.main-nav .search picture image {
+  min-width: 24px;
+  max-width: 24px;
 }
 
 .main-nav .login {
@@ -489,7 +506,7 @@ footer a {
     background-color: var(--black-color);
   }
 
-  .main-nav .search p {
+  .main-nav .search input {
     display: none;
   }
 
