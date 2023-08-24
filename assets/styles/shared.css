@@ -397,6 +397,10 @@ footer a {
     margin: 1em;
   }
 
+  .main-nav .hide {
+    display: none;
+  }
+
   .main-nav .nav-links li {
     margin: 1em 0;
   }
@@ -503,6 +507,10 @@ footer a {
     flex-direction: column;
     width: 100%;
     margin: 1em;
+  }
+
+  .main-nav .hide {
+    display: none;
   }
 
   .main-nav .nav-links li {

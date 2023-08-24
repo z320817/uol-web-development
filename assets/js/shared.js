@@ -4,6 +4,10 @@ let footer = null;
 let isMobileFooterCreated = false;
 /* Ends store initial footer state */
 
+/* Start store mobile-menu reference */
+let mobileMenu = document.getElementById("main-nav-mobile-menu");
+/* End store mobile-menu reference */
+
 /* Start store media query constants */
 // Store Media Query constants
 const mobileQuery = "(max-width: 575.98px)";
@@ -266,6 +270,16 @@ addEventListener("resize", () => {
 addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
+
+// Toggles mobile menu
+mobileMenu.addEventListener("click", () => {
+  const mainNavLinks = document.querySelector(".main-nav .nav-links");
+
+  if (mainNavLinks) {
+    mainNavLinks.classList.toggle("hide");
+  }
+});
+
 /* 
 Utility to handle screen resize behavior ends here 
 */
