@@ -220,8 +220,13 @@ footer {
   margin: 0 .4em;
 }
 
+.footer-section .footer-newsletter input::placeholder {
+  color: var(--grey-color);
+}
+
 .footer-section .footer-newsletter input {
   width: 100%;
+  color: var(--black-color);
 }
 
 .footer-section .footer-nav .nav-links li:first-child {
