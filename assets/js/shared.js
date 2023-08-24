@@ -4,9 +4,10 @@ let footer = null;
 let isMobileFooterCreated = false;
 /* Ends store initial footer state */
 
-/* Start store mobile-menu reference */
+/* Start store menu references */
 let mobileMenu = document.getElementById("main-nav-mobile-menu");
-/* End store mobile-menu reference */
+let searchInput = document.getElementById("main-search");
+/* End store menu reference */
 
 /* Start store media query constants */
 // Store Media Query constants
@@ -270,16 +271,6 @@ addEventListener("resize", () => {
 addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
-
-// Toggles mobile menu
-mobileMenu.addEventListener("click", () => {
-  const mainNavLinks = document.querySelector(".main-nav .nav-links");
-
-  if (mainNavLinks) {
-    mainNavLinks.classList.toggle("hide");
-  }
-});
-
 /* 
 Utility to handle screen resize behavior ends here 
 */
@@ -356,3 +347,27 @@ setInterval(() => {
 /* 
 Dynamic cursor for headers handler ends here
 */
+
+// Toggles mobile menu
+if (mobileMenu) {
+  mobileMenu.addEventListener("click", () => {
+    const mainNavLinks = document.querySelector(".main-nav .nav-links");
+
+    if (mainNavLinks) {
+      mainNavLinks.classList.toggle("hide");
+    }
+  });
+}
+
+// Handles search field
+if (searchInput) {
+  searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key.toLowerCase() === 'enter') {
+      const currentPath = window.location.href;
+      const url = new URL(currentPath);
+      url.pathname = "/pages/search-results.html";
+      window.location.href = url.toString();
+    }
+  });
+}
