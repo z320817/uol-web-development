@@ -337,8 +337,13 @@
         </div>
         <div class="footer-section">
             <div class="footer-newsletter">
-                <img alt="Email icon" src="assets/icons/email.svg">
-                <p>your@email.here</p>
+                <label for="newsletter">
+                    <picture>
+                        <source srcset="assets/icons/email.svg" media="(max-width: 575.98px)" type="image/svg+xml">
+                        <img alt="Search icon" src="assets/icons/email.svg">
+                    </picture>
+                </label>
+                <input type="text" id="newsletter" name="newsletter" placeholder="your@email.here">
                 <button>Subscribe</button>
             </div>
             <div class="footer-text">
