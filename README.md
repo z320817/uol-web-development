@@ -2,6 +2,9 @@
 
 This project is a final project for the Web Development CM1040 module at the University of London.
 
+# Project report#
+Report can be found here: [main report page](https://github.com/z320817/uol-web-development/blob/main/report/index.html)
+
 ## Table of Contents
 
 - [About](#about)
