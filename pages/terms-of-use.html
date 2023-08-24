@@ -248,9 +248,14 @@
         </div>
         <div class="footer-section">
             <div class="footer-newsletter">
-                <img alt="Email icon" src="../assets/icons/email.svg">
-                <p>your@email.here</p>
-                <button>Subscribe</button>
+                <label for="subscription">
+                    <picture>
+                        <source srcset="../assets/icons/email.svg" media="(max-width: 575.98px)" type="image/svg+xml">
+                        <img alt="Search icon" src="../assets/icons/email.svg">
+                    </picture>
+                </label>
+                <input type="text" id="subscription" name="subscription" placeholder="your@email.here">
+                <button aria-label="Subscribe">Subscribe</button>
             </div>
             <div class="footer-text">
                 <h5><span class="static-cursor"></span>Security</h5>
