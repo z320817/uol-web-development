@@ -16,17 +16,21 @@
 <body>
     <main aria-label="Main page content">
         <h1>Report on web development progress</h1>
-        <h3>Name</h3>
+        <h3>Student</h3>
         <ul>
-            <li>Yosef Shulman</li>
+            <li><strong>Name: </strong>Yosef Shulman</li>
+            <li><strong>Number: </strong>220306410 </li>
         </ul>
         <h3>Introduction</h3>
         <ul>
             <li>
-                The website I have developed serves as a hub for local cybersecurity professionals to collaborate, share
-                insights, and stay updated on the latest industry trends. The essential story being told is one of
-                knowledge exchange, skill enhancement, and community-building. The chosen structure is centered around
-                user researches, opinions, and how-to guides.
+                The website I have developed serves as a hub for local cybersecurity professionals to share insights and
+                stay updated on the latest industry trends. The essential ideas are knowledge exchange, skill
+                enhancement, and community building. The chosen structure is centered around user's research,
+                professional
+                opinions, and how-to guides for industry professionals.
+                I intentionally did not use any frameworks or libraries, besides small dependency for initial CSS
+                normalization and custom fonts.
             </li>
         </ul>
         <h3>Inspiration</h3>
@@ -35,10 +39,10 @@
                 <a href="https://www.zdnet.com/">https://www.zdnet.com/</a>,
                 <a href="https://www.bleepingcomputer.com/">https://www.bleepingcomputer.com/</a>
             </li>
-            <li><strong>LinkedIn Groups:</strong>
+            <li><strong>LinkedIn Group:</strong>
                 <a href="https://www.linkedin.com/groups/1836487/">https://www.linkedin.com/groups/1836487/</a>
             </li>
-            <li><strong>Cybersecurity Blogs:</strong>
+            <li><strong>Cybersecurity Blog:</strong>
                 <a href="https://thehackernews.coma/">https://thehackernews.coma/</a>
             </li>
         </ul>
@@ -48,22 +52,20 @@
                 <p>Text has sufficient contrast against the background to ensure readability.</p>
             </li>
             <li><strong>Text Resizing:</strong>
-                <p>Website should allow text to be resized without causing layout issues or content overlaps.</p>
+                <p>The website allows text to be resized without causing layout issues or content overlaps.</p>
             </li>
-            <li><strong>Semantic HTML:</strong>
-                <p>Proper HTML tags used to structure content logically. Headings, lists, and other elements convey the
-                    document's structure accurately.</p>
+            <li><strong>Semantic HTML and ARIA labels:</strong>
+                <p>Proper HTML tags are used to structure content logically. Headings, lists, and other elements convey
+                    the document's structure accurately. ARIA labels are applied occasionally.</p>
             </li>
         </ul>
         <h3>Usability</h3>
         <ul>
             <li><strong>Responsive Design:</strong>
-                <p>The website incorporates a responsive design approach, ensuring optimal user experience across
-                    various devices and screen sizes.
-                    Special attention is given to mobile devices. I wrote a script that dynamically adjusts image widths
-                    to fit smaller screens.
-                    This script intelligently resizes images and selects appropriate fall-back images for devices with
-                    limited display capabilities.</p>
+                <p>The website incorporates a responsive design approach, ensuring an optimal user experience across
+                    various devices and screen sizes. Special attention is given to mobile devices. I wrote a script
+                    that dynamically adjusts image widths to fit smaller screens. This script uses resized images and
+                    selects appropriate fall-back images for devices with limited display capabilities.</p>
             </li>
             <li><strong>Mobile-Friendly Navigation:</strong>
                 <p>The navigation menu is thoughtfully designed for mobile users, employing a collapsible menu structure
@@ -77,35 +79,68 @@
         <h3>Learning</h3>
         <ul>
             <li><strong>Cybersecurity Fundamentals:</strong>
-                <p>As a non-cybersecurity professional, I needed to learn the foundational concepts of cybersecurity to
-                    design a meaningful platform. Online courses and industry resources provided valuable insights.</p>
+                <p>As a non-cybersecurity professional, I learned some foundational concepts of cybersecurity to design
+                    a meaningful website. Industry resources provided valuable insights. Please find references below.
+                </p>
             </li>
             <li><strong>Community Management:</strong>
-                <p>I learning a fair bit about effective online community management strategies, including moderation
-                    and conflict resolution techniques. I think this knowladge is essential to create a safe and
+                <p>I learned a small bit about effective online community management strategies, including moderation
+                    and conflict resolution techniques. I think this knowledge is essential to creating a safe and
                     productive environment for users.</p>
             </li>
             <li><strong>ARIA Roles and Attributes:</strong>
-                <p> I learned about ARIA (Accessible Rich Internet Applications) roles and attributes, which allow me to
-                    enhance the accessibility of interactive elements, such as dropdown menus and modal dialogs, for
+                <p>I learned about ARIA (Accessible Rich Internet Applications) roles and attributes, which allow me to
+                    enhance the accessibility of interactive elements, such as dropdown menus and content areas, for
                     users who rely on screen readers.</p>
             </li>
         </ul>
-        <h3>Git repository:</h3>
+        <h3>Evaluation I</h3>
         <ul>
-            <li>Project repository: <a
-                    href="https://github.com/z320817/uol-web-development">https://github.com/z320817/uol-web-development</a>
+            <li><strong>Utilizing Media Queries and JavaScript:</strong>
+                <p>JavaScript in combination with media queries enables the creation of a responsive footer that adjusts
+                    its layout and content based on the device width, ensuring a consistent user experience across
+                    various screens. Automatic generation of HTML elements such as a footer and featured section
+                    enhances the website's adaptability and visual appeal by tailoring content display to the specific
+                    characteristics of each user's device.</p>
+            </li>
+            <li><strong>Lavaraged CSS for responsive Design with Media Queries:</strong>
+                <p>Employing media queries in CSS, a responsive design is achieved by adjusting styling rules based on
+                    the device's width. These queries enable a seamless transition between different layouts.</p>
+            </li>
+            <li><strong>Relative Measures for Fluidity:</strong>
+                <p>Implementing relative units like percentages and em in CSS promotes fluidity and responsiveness. By
+                    using relative measures, elements scale proportionally with their parent containers, maintaining a
+                    harmonious layout regardless of the device's screen dimensions.</p>
             </li>
         </ul>
-
-        <h3>Wireframes:</h3>
+        <h3>Evaluation II</h3>
         <ul>
+            <li><strong>Main page sliders:</strong>
+                <p>Custom JavaScript in combination with CSS was used to create sliders for the subject sections on the
+                    main page. It tracks touch and mouse directions and slides accordingly. What I would improve is
+                    sliding speed. Also, JS organizations, in terms of code structure, I would want to improve.
+                </p>
+            </li>
+            <li><strong>ARIA accesability marckup:</strong>
+                <p>Even though ARIA labels are used around the website, I would improve that usage further. There are
+                    more options available.</p>
+            </li>
+            <li><strong>Content management:</strong>
+                <p>A lot of HTMl code duplication is used around the website. It makes it harder to maintain such a
+                    website. If you need to introduce changes, then you have to make multiple file updates. I would
+                    prefer some management system to dynamically populate elements with content.</p>
+            </li>
+        </ul>
+        <h3>Resources</h3>
+        <ul>
+            <li>Git repository: <a
+                    href="https://github.com/z320817/uol-web-development">https://github.com/z320817/uol-web-development</a>
+            </li>
             <li>
                 Figma wireframes: <a
                     href="https://www.figma.com/file/XWEsKgDfc6QXhxZHqLOHCK/Web-Development?type=design&node-id=0%3A1&mode=design&t=fX8Gpfm2D19xF8h9-1">https://www.figma.com/file/XWEsKgDfc6QXhxZHqLOHCK/Web-Development?type=design&node-id=0%3A1&mode=design&t=fX8Gpfm2D19xF8h9-1</a>
             </li>
         </ul>
-
         <h3>References:</h3>
         <h5>Code references:</h5>
         <ul>
